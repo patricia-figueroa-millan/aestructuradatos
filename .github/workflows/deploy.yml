@@ -31,8 +31,7 @@ jobs:
       - run: mkdir -p dist && cp public/index.html dist/index.html
 
       # 2. Compilar cada archivo md en su propia carpeta
-      - run: npx slidev build slides/sesion-1.md --out dist/sesion-1 --base /sesion-1/
-      # Descomenta la siguiente línea cuando agregues la sesión 2:
+      - run: npx slidev build slides/sesion-1.md --out dist/sesion-1 --base /sesion-1/      # Descomenta la siguiente línea cuando agregues la sesión 2:
       # - run: npx slidev build slides/sesion-2.md --out dist/sesion-2 --base /sesion-2/
 
       - uses: actions/configure-pages@v4
