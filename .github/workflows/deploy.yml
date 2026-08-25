@@ -30,10 +30,9 @@ jobs:
       # 1. Crear carpeta dist y copiar el portal index.html
       - run: mkdir -p dist && cp public/index.html dist/index.html
 
-      # 2. Compilar cada archivo md en su propia carpeta
-      - run: npx slidev build slides/sesion-1.md --out dist/sesion-1 --base /sesion-1/      # Descomenta la siguiente línea cuando agregues la sesión 2:
-      # - run: npx slidev build slides/sesion-2.md --out dist/sesion-2 --base /sesion-2/
-
+      # 2. Compilar con base relativa (./)
+      - run: npx slidev build slides/sesion-1.md --out dist/sesion-1 --base ./
+      
       - uses: actions/configure-pages@v4
       - uses: actions/upload-pages-artifact@v3
         with:

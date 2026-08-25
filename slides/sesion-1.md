@@ -1,5 +1,5 @@
 ---
-background: ../background3.jpg
+background: /background3.jpg
 title: Algoritmia y Estructura de Datos
 class: text-center flex items-center justify-center h-full
 transition: slide-left
