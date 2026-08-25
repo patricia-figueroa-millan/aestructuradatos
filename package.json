@@ -3,10 +3,10 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "build": "slidev build",
-    "dev": "slidev --open",
-    "export": "slidev export"
-  },
+  "dev": "slidev slides/sesion-1.md",
+  "build": "slidev build slides/sesion-1.md",
+  "export": "slidev export slides/sesion-1.md"
+},
   "dependencies": {
     "@slidev/cli": "^52.6.0",
     "@slidev/theme-default": "latest",
