@@ -1,0 +1,141 @@
+/* ==========================================================================
+   1. TIPOGRAFÍA BASE Y JERARQUÍA
+   ========================================================================== */
+
+   .slidev-layout,
+   .slidev-layout p,
+   .slidev-layout li {
+     font-size: 1.125rem !important;
+     line-height: 1.25 !important;
+     color: #1e293b !important;
+     opacity: 1 !important;
+   }
+   
+   /* Subtítulo inmediatamente debajo de H1 */
+   .slidev-layout h1 + p {
+     color: #0f172a !important;
+     font-size: 1.2rem !important;
+     font-weight: 600 !important;
+     letter-spacing: -0.01em;
+     margin-top: 0.2rem !important;
+     margin-bottom: 1.2rem !important;
+   }
+   
+   /* Tamaños de texto específicos */
+   .slidev-layout [class*="text-[10px]"],
+   .slidev-layout [class*="text-[11px]"],
+   .slidev-layout .text-xs {
+     font-size: 1.2rem !important;
+     line-height: 1.35 !important;
+   }
+   
+   .slidev-layout .text-sm { font-size: 1.35rem !important; line-height: 1.3 !important; }
+   .slidev-layout .text-xl, .slidev-layout .text-lg { font-size: 1.35rem !important; line-height: 1.3 !important; }
+   .slidev-layout h3, .slidev-layout .text-2xl { font-size: 1.5rem !important; line-height: 1.25 !important; }
+   .slidev-layout h2, .slidev-layout .text-3xl { font-size: 1.85rem !important; line-height: 1.2 !important; }
+   .slidev-layout h1, .slidev-layout .text-4xl { font-size: 2.35rem !important; line-height: 1.15 !important; }
+   
+   /* Tablas y Código */
+   .slidev-layout table { width: 100%; font-size: 1.05rem !important; line-height: 1.3 !important; }
+   .slidev-layout th, .slidev-layout td { padding: 6px 10px !important; }
+   .slidev-layout code, .slidev-layout .font-mono { font-size: 0.92em; }
+   
+   
+   /* ==========================================================================
+      2. ESPACIADO Y COMPACTACIÓN VERTICAL
+      ========================================================================== */
+   
+   .slidev-layout h1 { margin-bottom: 0.4rem !important; }
+   .slidev-layout h2, .slidev-layout h3 { margin-top: 0.2rem !important; margin-bottom: 0.3rem !important; }
+   
+   .slidev-layout [class*="my-8"],
+   .slidev-layout [class*="my-4"],
+   .slidev-layout [class*="my-3"],
+   .slidev-layout [class*="my-2"] {
+     margin-top: 0.3rem !important;
+     margin-bottom: 0.3rem !important;
+   }
+   
+   .slidev-layout [class*="gap-4"],
+   .slidev-layout [class*="gap-3"] {
+     gap: 0.4rem !important;
+   }
+   
+   .slidev-layout [class*="p-8"],
+   .slidev-layout [class*="p-5"],
+   .slidev-layout [class*="p-4"] {
+     padding: 0.6rem 0.8rem !important;
+   }
+   
+   .slidev-layout img { max-height: 220px !important; object-fit: contain; }
+   
+   
+   /* ==========================================================================
+   3. TARJETAS DE COLORES PASTEL Y CONTRASTE DE TÍTULOS
+   ========================================================================== */
+
+    /* Estructura base para tarjetas pastel */
+    .slidev-layout [class*="bg-blue-"],
+    .slidev-layout [class*="bg-emerald-"],
+    .slidev-layout [class*="bg-amber-"],
+    .slidev-layout [class*="bg-purple-"],
+    .slidev-layout [class*="bg-rose-"],
+    .slidev-layout [class*="bg-indigo-"],
+    .slidev-layout [class*="bg-cyan-"] {
+    border-left-width: 4px !important;
+    border-radius: 0.75rem !important;
+    padding: 0.6rem 0.75rem !important;
+    }
+
+    /* Bordes laterales automáticos */
+    .slidev-layout [class*="bg-blue-"]    { border-left-color: #3b82f6 !important; }
+    .slidev-layout [class*="bg-emerald-"] { border-left-color: #10b981 !important; }
+    .slidev-layout [class*="bg-amber-"]   { border-left-color: #f59e0b !important; }
+    .slidev-layout [class*="bg-purple-"]  { border-left-color: #a855f7 !important; }
+    .slidev-layout [class*="bg-rose-"]    { border-left-color: #f43f5e !important; }
+    .slidev-layout [class*="bg-indigo-"]  { border-left-color: #6366f1 !important; }
+    .slidev-layout [class*="bg-cyan-"]    { border-left-color: #06b6d4 !important; }
+
+    /* Títulos dentro de tarjetas pastel (Negro suave / Slate 900) */
+    .slidev-layout [class*="bg-"] .font-bold,
+    .slidev-layout [class*="bg-"] b,
+    .slidev-layout [class*="bg-"] strong {
+    color: #0f172a !important;
+    font-weight: 700 !important;
+    }
+
+    /* Excepción: Mantiene texto blanco únicamente en botones o badges con fondo oscuro (ej. AULA, EQUIPOS) */
+    .slidev-layout .text-white,
+    .slidev-layout [class*="bg-"] .text-white {
+    color: #ffffff !important;
+    }
+   
+   /* ==========================================================================
+      4. TARJETAS OSCURAS Y CONTRASTE (SLATE 800/900)
+      ========================================================================== */
+   
+   .slidev-layout [class*="bg-slate-8"],
+   .slidev-layout [class*="bg-slate-9"] {
+     color: #f8fafc !important;
+   }
+   
+   .slidev-layout .bg-slate-800 p,
+   .slidev-layout .bg-slate-800 span:not(.text-amber-400):not([class*="text-amber-"]) {
+     color: #f1f5f9 !important;
+   }
+   
+   .slidev-layout .bg-slate-800 .text-amber-400,
+   .slidev-layout .bg-slate-800 [class*="text-amber-"] {
+     color: #fbbf24 !important;
+   }
+   
+   /* Permitir clases de color internas y texto blanco puro */
+   .slidev-layout [class*="bg-slate-8"] [class*="text-"],
+   .slidev-layout [class*="bg-slate-9"] [class*="text-"] {
+     color: unset !important;
+   }
+   
+   .slidev-layout .text-white,
+   .slidev-layout [class*="bg-slate-9"] .text-white {
+     color: #ffffff !important;
+   }
