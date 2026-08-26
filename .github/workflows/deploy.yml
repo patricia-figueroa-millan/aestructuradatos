@@ -34,21 +34,27 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Create portal
-        run: |
-          mkdir -p dist
-          cp public/index.html dist/index.html
-          cp public/CNAME dist/CNAME
-
       - name: Build Sesión 1
         run: |
           npx slidev build slides/sesion-1.md \
             --out dist/sesion-1 \
             --base /sesion-1/
-          
-          echo "=== CONTENIDO DE DIST ==="
+
+      - name: Copy portal
+        run: |
+          cp public/index.html dist/index.html
+
+          if [ -f public/CNAME ]; then
+            cp public/CNAME dist/CNAME
+          fi
+
+      - name: Verify build
+        run: |
+          echo "=== ARCHIVOS GENERADOS ==="
           find dist -maxdepth 3 -type f | sort
 
+          echo "=== VERIFICANDO SESION 1 ==="
+          test -f dist/sesion-1/index.html
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v4
