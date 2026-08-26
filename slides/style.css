@@ -1,0 +1,225 @@
+/* =========================
+   BASE GENERAL
+   ========================= */
+
+   html body #app .slidev-layout {
+    font-size: 1.08rem;
+    line-height: 1.32;
+  }
+  
+  /* Texto normal */
+  html body #app .slidev-layout p,
+  html body #app .slidev-layout li {
+    font-size: 1.18rem !important;
+    line-height: 1.32 !important;
+    font-weight: 450;
+  }
+  
+  /* =========================
+     TÍTULOS
+     ========================= */
+  
+  html body #app .slidev-layout h1 {
+    font-size: 2.9rem !important;
+    line-height: 1.08 !important;
+    font-weight: 800 !important;
+  }
+  
+  html body #app .slidev-layout h2 {
+    font-size: 2.15rem !important;
+    line-height: 1.12 !important;
+    font-weight: 700 !important;
+  }
+  
+  html body #app .slidev-layout h3 {
+    font-size: 1.55rem !important;
+    line-height: 1.18 !important;
+    font-weight: 700 !important;
+  }
+  
+  /* =========================
+     CLASES PEQUEÑAS
+     ========================= */
+  
+  html body #app .slidev-layout .text-xs,
+  html body #app .slidev-layout [class*="text-[10px]"],
+  html body #app .slidev-layout [class*="text-[10.5px]"],
+  html body #app .slidev-layout [class*="text-[11px]"] {
+    font-size: 1rem !important;
+    line-height: 1.25 !important;
+  }
+  
+  html body #app .slidev-layout .text-sm {
+    font-size: 1.1rem !important;
+    line-height: 1.28 !important;
+  }
+  
+  /* =========================
+     TABLAS
+     ========================= */
+  
+  html body #app .slidev-layout table {
+    font-size: 1rem !important;
+    line-height: 1.24 !important;
+  }
+  
+  html body #app .slidev-layout th {
+    font-size: 1.05rem !important;
+    line-height: 1.2 !important;
+    font-weight: 700 !important;
+  }
+  
+  html body #app .slidev-layout td {
+    font-size: 1rem !important;
+    line-height: 1.24 !important;
+  }
+  
+  /* =========================
+     CÓDIGO
+     ========================= */
+  
+  html body #app .slidev-layout pre {
+    font-size: 0.95rem;
+    line-height: 1.25;
+  }
+  
+  html body #app .slidev-layout code {
+    font-size: 0.95em;
+  }
+  
+  /* =========================
+     OPACIDAD
+     ========================= */
+  
+  html body #app .slidev-layout p,
+  html body #app .slidev-layout li,
+  html body #app .slidev-layout td,
+  html body #app .slidev-layout th {
+    opacity: 1 !important;
+  }
+  
+  /* Mantener texto blanco en fondos oscuros */
+  html body #app .slidev-layout .text-white,
+  html body #app .slidev-layout [class*="bg-slate-8"] *,
+  html body #app .slidev-layout [class*="bg-slate-9"] * {
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+  }
+
+  /* =========================================================
+   NORMALIZACIÓN DE SLIDES ACADÉMICAS DENSAS
+   ========================================================= */
+
+/* Texto pequeño de Tailwind:
+   text-xs, 10px, 10.5px y 11px dejan de verse diminutos */
+.slidev-layout .text-xs,
+.slidev-layout [class*="text-[10px]"],
+.slidev-layout [class*="text-[10.5px]"],
+.slidev-layout [class*="text-[11px]"] {
+  font-size: 1.18rem !important;
+  line-height: 1.22 !important;
+}
+
+/* text-sm */
+.slidev-layout .text-sm {
+  font-size: 1.28rem !important;
+  line-height: 1.25 !important;
+}
+
+/* Texto general dentro de tarjetas */
+.slidev-layout p {
+  line-height: 1.28 !important;
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+}
+
+/* Listas más compactas */
+.slidev-layout li {
+  line-height: 1.28 !important;
+  margin-top: 0.1rem;
+  margin-bottom: 0.1rem;
+}
+
+/* Los H3 de las tarjetas no deben ocupar tanto espacio vertical */
+.slidev-layout h3 {
+  margin-top: 0.15rem !important;
+  margin-bottom: 0.35rem !important;
+  line-height: 1.15 !important;
+}
+
+/* Evitar grandes huecos dentro de las tarjetas */
+.slidev-layout div > p:first-child {
+  margin-top: 0 !important;
+}
+
+.slidev-layout div > p:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* =========================================================
+   TARJETAS COMPACTAS
+   ========================================================= */
+
+/*
+   Las tarjetas de este bloque usan frecuentemente p-2, p-2.5, p-3.
+   Reducimos el espacio vertical sin tocar demasiado el horizontal.
+*/
+
+.slidev-layout .p-2 {
+  padding-top: 0.45rem !important;
+  padding-bottom: 0.45rem !important;
+}
+
+.slidev-layout .p-3 {
+  padding-top: 0.65rem !important;
+  padding-bottom: 0.65rem !important;
+}
+
+.slidev-layout .p-4 {
+  padding-top: 0.8rem !important;
+  padding-bottom: 0.8rem !important;
+}
+
+/* =========================================================
+   MÁRGENES VERTICALES
+   ========================================================= */
+
+/* En slides densas estos mt-5 generan mucho espacio perdido */
+.slidev-layout .mt-5 {
+  margin-top: 0.8rem !important;
+}
+
+.slidev-layout .my-3 {
+  margin-top: 0.6rem !important;
+  margin-bottom: 0.6rem !important;
+}
+
+.slidev-layout .my-2 {
+  margin-top: 0.4rem !important;
+  margin-bottom: 0.4rem !important;
+}
+
+/* =========================================================
+   TABLAS
+   ========================================================= */
+
+.slidev-layout table,
+.slidev-layout table td {
+  font-size: 1.12rem !important;
+  line-height: 1.22 !important;
+}
+
+.slidev-layout table th {
+  font-size: 1.18rem !important;
+  line-height: 1.2 !important;
+}
+
+/* =========================================================
+   BADGES Y ETIQUETAS MONO
+   ========================================================= */
+
+.slidev-layout .font-mono.text-xs,
+.slidev-layout span.text-xs {
+  font-size: 1.05rem !important;
+  line-height: 1.2 !important;
+}

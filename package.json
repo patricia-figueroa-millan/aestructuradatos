@@ -3,10 +3,11 @@
   "type": "module",
   "private": true,
   "scripts": {
-  "dev": "slidev slides/sesion-1.md",
-  "build": "slidev build slides/sesion-1.md",
-  "export": "slidev export slides/sesion-1.md"
-},
+    "dev": "slidev slides/sesion-1.md",
+    "dev:sesion1": "slidev slides/sesion-1.md",
+    "build:sesion1": "slidev build slides/sesion-1.md",
+    "export:sesion1": "slidev export slides/sesion-1.md"
+  },
   "dependencies": {
     "@slidev/cli": "^52.6.0",
     "@slidev/theme-default": "latest",
