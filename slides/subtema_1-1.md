@@ -47,16 +47,12 @@ transition: fade-out
 
 # AGENDA
 
-- 📝 **Presentación del Curso** 
-- 📕 **Tema 1: Análisis y Diseño de Algoritmos** 
+- 📝 **Presentación del Curso**
+- 📕 **Tema 1: Análisis y Diseño de Algoritmos**
 - 📕 **1.1. Definición de algoritmo y estructuras de datos.**
-<br>
-<br>
 
-<!--Read more about [Why Slidev?](https://sli.dev/guide/why)
-You can have `style` tag in markdown to override the style for the current page.
-Learn more: https://sli.dev/features/slide-scope-style
--->
+<br>
+<br>
 
 <style>
 h1 {
@@ -69,10 +65,6 @@ h1 {
   -moz-text-fill-color: transparent;
 }
 </style>
-
-<!--
-Here is another comment.
--->
 
 ---
 transition: fade-out
