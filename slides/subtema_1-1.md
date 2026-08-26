@@ -49,6 +49,7 @@ transition: fade-out
 
 - 📝 **Presentación del Curso** 
 - 📕 **Tema 1: Análisis y Diseño de Algoritmos** 
+-    ** 1.1. Definición de algoritmo y estructuras de datos.**
 <br>
 <br>
 
