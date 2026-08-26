@@ -105,6 +105,7 @@ Además, tiene la habilidad de **analizar críticamente** uso y aplicaciones de 
 ---
 layout: center
 transition: fade-out
+title: El Rol de la Asignatura en la Inteligencia Artificial
 ---
 
 <div class="max-w-2xl mx-auto p-10 rounded-2xl bg-gray-50/80 dark:bg-gray-800/50 border border-gray-200 dark:border-gray-700/80 shadow-xl text-center backdrop-blur-sm">
@@ -124,6 +125,7 @@ transition: fade-out
 ---
 transition: fade-out
 layout: two-cols
+title: La inteligencia artificial no es magia.
 ---
 
 La Inteligencia Artificial no es magia; es **computación de alto rendimiento** aplicada.
@@ -201,6 +203,7 @@ transition: fade-out
 ---
 transition: slide-up
 level: 2
+title: Temario de la asignatura
 ---
 
 # Temario de la asignatura (1/2)
@@ -330,6 +333,7 @@ transition: fade-out
 layout: default
 transition: fade-out
 zoom: 0.90
+title: Criterios de Evaluación
 ---
 
 # Criterios generales de evaluación
@@ -397,6 +401,7 @@ zoom: 0.90
 ---
 layout: center
 transition: fade-out
+tittle: Políticas del Curso
 ---
 
 <div class="max-w-2xl mx-auto p-10 rounded-2xl bg-gray-50/80 dark:bg-gray-800/50 border border-gray-200 dark:border-gray-700/80 shadow-xl text-center backdrop-blur-sm">
@@ -546,6 +551,7 @@ Lineamientos para el trabajo en equipo, la disciplina y el contacto fuera de cla
 ---
 layout: center
 transition: fade-out
+title: Tema 1. Análisis y Diseño de Algoritmos
 ---
 
 <div class="max-w-xl mx-auto p-8 rounded-2xl bg-gray-50/80 dark:bg-gray-800/50 border border-gray-200 dark:border-gray-700/80 shadow-xl text-center backdrop-blur-sm">
@@ -576,6 +582,7 @@ transition: fade-out
 ---
 layout: center
 transition: fade-out
+title: El pilar de la Ingeniería
 ---
 
 <div class="max-w-2xl mx-auto p-8 rounded-2xl bg-gray-50/80 dark:bg-gray-800/50 border border-gray-200 dark:border-gray-700/80 shadow-xl text-center backdrop-blur-sm">

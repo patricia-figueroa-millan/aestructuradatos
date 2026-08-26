@@ -223,3 +223,8 @@
   font-size: 1.05rem !important;
   line-height: 1.2 !important;
 }
+
+/* Ocultar el panel lateral de navegación rápida de Slidev */
+#slidev-goto-dialog {
+  display: none !important;
+}
