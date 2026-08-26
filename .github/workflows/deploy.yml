@@ -39,9 +39,9 @@ jobs:
 
       - name: Build Sesión 1
         run: |
-          npx slidev build slides/sesion-1.md \
-            --out ../dist/sesion-1 \
-            --base /sesion-1/
+          npx slidev build slides/subtema_1-1.md \
+            --out ../dist/subtema_1-1 \
+            --base /subtema_1-1/
 
       - name: Copy portal
         run: |
@@ -60,7 +60,7 @@ jobs:
           test -f dist/index.html
 
           echo "=== VERIFICANDO SESION 1 ==="
-          test -f dist/sesion-1/index.html
+          test -f dist/subtema_1-1/index.html
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v4
