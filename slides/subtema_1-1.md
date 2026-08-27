@@ -2552,24 +2552,23 @@ Recursos de memoria utilizados durante la ejecución.
 
 ---
 layout: default
-zoom: 0.92
 ---
 
 # El trabajo de un algoritmo crece cuando aumentan los datos
 
-<div class="mt-3 text-center text-lg">
-
+<div class="text-center text-lg mt-3">
 Durante los ejemplos de búsqueda aparecieron dos expresiones:
-
 </div>
 
-<div class="grid grid-cols-2 gap-6 mt-5">
+<div class="grid grid-cols-2 gap-6 mt-6">
 
-<div class="p-4 rounded-xl bg-blue-50 dark:bg-blue-900/30 text-center">
+<div class="p-5 rounded-xl bg-blue-50 dark:bg-blue-900/30 text-center">
 
-### Búsqueda Lineal
+<div class="font-bold text-xl mb-2">
+Búsqueda Lineal
+</div>
 
-<div class="text-3xl mt-1">
+<div class="text-3xl font-bold my-3">
 
 $$
 O(n)
@@ -2577,15 +2576,19 @@ $$
 
 </div>
 
-El trabajo aumenta conforme aumenta la cantidad de datos.
+<p>
+El trabajo aumenta conforme aumenta la <b>cantidad de datos</b>.
+</p>
 
 </div>
 
-<div class="p-4 rounded-xl bg-green-50 dark:bg-green-900/30 text-center">
+<div class="p-5 rounded-xl bg-green-50 dark:bg-green-900/30 text-center">
 
-### Búsqueda Binaria
+<div class="font-bold text-xl mb-2">
+Búsqueda Binaria
+</div>
 
-<div class="text-3xl mt-1">
+<div class="text-3xl font-bold my-3">
 
 $$
 O(\log n)
@@ -2593,28 +2596,158 @@ $$
 
 </div>
 
-El trabajo crece mucho más lentamente al aumentar la cantidad de datos.
+<p>
+El trabajo crece mucho más lentamente al aumentar la <b>cantidad de datos</b>.
+</p>
 
 </div>
 
 </div>
 
-<div class="mt-4 p-4 rounded-xl bg-yellow-50 dark:bg-yellow-900/30 text-center text-lg">
+<div class="mt-6 p-4 rounded-xl bg-yellow-50 dark:bg-yellow-900/30 text-center text-lg">
 
-###  Por ahora, quedémonos con esto:
+<b>Por ahora, quedémonos con esto:</b>
 
-Estas expresiones describen **cómo crece el trabajo de un algoritmo cuando aumenta la cantidad de datos**.
+$O(n)$ y $O(\log n)$ describen <b>cómo crece el trabajo de un algoritmo</b> cuando aumenta la cantidad de datos.
 
 </div>
 
-<div class="mt-4 text-center text-xl font-bold">
+---
+layout: default
+zoom: 0.95
+---
 
+# ¿Qué significa el logaritmo en la búsqueda binaria?
+
+<div class="text-center text-lg mt-3">
+Hay dos expresiones relacionadas, pero <b>no significan exactamente lo mismo</b>.
+</div>
+
+<div class="grid grid-cols-2 gap-6 mt-6">
+
+<div class="p-5 rounded-xl bg-indigo-50 dark:bg-indigo-900/30 text-center">
+
+<div class="font-bold text-xl mb-2">
+Complejidad
+</div>
+
+<div class="text-3xl my-3">
+
+$$
+O(\log n)
+$$
+
+</div>
+
+<p>
+Describe <b>cómo crece el trabajo</b> del algoritmo cuando aumenta el tamaño de los datos.
+</p>
+
+</div>
+
+<div class="p-5 rounded-xl bg-green-50 dark:bg-green-900/30 text-center">
+
+<div class="font-bold text-xl mb-2">
+Caso concreto: n = 100
+</div>
+
+<div class="text-2xl my-3">
+
+$$
+\lceil \log_2 100 \rceil = 7
+$$
+
+</div>
+
+<p>
+Relaciona 100 elementos con aproximadamente <b>7 reducciones sucesivas a la mitad</b>.
+</p>
+
+</div>
+
+</div>
+
+<div class="mt-5 p-4 rounded-xl bg-yellow-50 dark:bg-yellow-900/30 text-center">
+
+<b>Idea clave:</b> $O(\log n)$ describe el <b>crecimiento</b>; $\log_2 n$ aparece porque la búsqueda binaria <b>reduce el espacio de búsqueda aproximadamente a la mitad</b> en cada paso.
+
+</div>
+
+<div class="mt-5 text-center text-xl font-bold">
 ¿Cómo podemos medir y comparar formalmente ese crecimiento?
-
 </div>
 
 <div class="mt-2 text-center text-lg">
+→ Lo estudiaremos al abordar la <b>complejidad algorítmica</b>.
+</div>
 
-→ Lo estudiaremos al abordar la **complejidad algorítmica**.
+---
+layout: default
+transition: slide-left
+---
+
+# Resumen
+
+<div class="text-lg mt-2 text-center">
+Antes de continuar, quedémonos con estas <b>cuatro ideas fundamentales</b>.
+</div>
+
+<div class="grid grid-cols-2 gap-4 mt-5">
+
+<div v-click="1" class="p-4 rounded-xl bg-blue-500/10">
+
+<div class="font-bold mb-2 text-blue-600 dark:text-blue-400">
+1. Algoritmo = cómo resolver
+</div>
+
+<p>
+Es una secuencia <b>precisa y finita de pasos</b> que transforma entradas en resultados.
+</p>
+
+</div>
+
+<div v-click="2" class="p-4 rounded-xl bg-purple-500/10">
+
+<div class="font-bold mb-2 text-purple-600 dark:text-purple-400">
+2. Estructura de datos = cómo organizar
+</div>
+
+<p>
+Define <b>cómo se almacenan y organizan los datos</b> para poder acceder y operar sobre ellos.
+</p>
+
+</div>
+
+<div v-click="3" class="p-4 rounded-xl bg-emerald-500/10">
+
+<div class="font-bold mb-2 text-emerald-600 dark:text-emerald-400">
+3. No funcionan de manera aislada
+</div>
+
+<p>
+El algoritmo opera sobre una estructura, y las <b>propiedades de esa estructura</b> pueden habilitar o limitar determinadas estrategias.
+</p>
+
+</div>
+
+<div v-click="4" class="p-4 rounded-xl bg-amber-500/10">
+
+<div class="font-bold mb-2 text-amber-600 dark:text-amber-400">
+4. Resolver no es suficiente
+</div>
+
+<p>
+Dos algoritmos pueden producir el mismo resultado, pero requerir una <b>cantidad de trabajo muy diferente</b>.
+</p>
+
+</div>
+
+</div>
+
+<div v-click="5" class="mt-5 p-4 rounded-xl bg-slate-900 text-white text-center">
+
+<b class="text-amber-300">Idea central del subtema:</b>
+
+La elección del algoritmo debe considerar <b>cómo están organizados los datos</b> y las propiedades de la estructura sobre la que opera.
 
 </div>
