@@ -31,10 +31,10 @@ Dra. Patricia Elizabeth Figueroa Millán
 
 <div class="flex flex-wrap justify-center items-center gap-3 text-xs font-mono text-slate-300">
 <span class="bg-white/10 px-3 py-1.5 rounded-lg border border-white/10">
-📧 patricia.figueroa@colima.tecnm.mx
+correo: patricia.figueroa@colima.tecnm.mx
 </span>
 <span class="bg-white/10 px-3 py-1.5 rounded-lg border border-white/10">
-📸 instagram: @patricia.figueroa.tecnm.mx
+ instagram: @patricia.figueroa.tecnm.mx
 </span>
 </div>
 </div>
@@ -47,9 +47,9 @@ transition: fade-out
 
 # AGENDA
 
-- 📝 **Presentación del Curso**
-- 📕 **Tema 1: Análisis y Diseño de Algoritmos**
-- 📕 **1.1. Definición de algoritmo y estructuras de datos.**
+-  **Presentación del Curso**
+-  **Tema 1: Análisis y Diseño de Algoritmos**
+-  **1.1. Definición de algoritmo y estructuras de datos.**
 
 <br>
 <br>
@@ -89,7 +89,7 @@ Además, tiene la habilidad de **analizar críticamente** uso y aplicaciones de 
 
 <div class="mt-4 p-3 bg-gray-100 dark:bg-gray-800 rounded-lg text-lg flex items-center justify-between border border-gray-300 dark:border-gray-700">
   <div class="flex items-center gap-2">
-    <span>🏫</span> 
+    <span></span> 
     <b>Código de Classroom:</b>
   </div>
   <code class="bg-amber-400 dark:bg-amber-500 text-gray-900 px-3 py-1 rounded-md font-mono font-bold shadow-sm">6zc7kldt</code>
@@ -183,7 +183,7 @@ transition: fade-out
   
   <!-- Encabezado de Contexto -->
   <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 text-xs font-mono font-bold mb-4">
-    <span>📚</span> CONTENIDO DEL CURSO
+    <span></span> CONTENIDO DEL CURSO
   </div>
 
   <!-- Título Principal -->
@@ -312,7 +312,7 @@ transition: fade-out
   
   <!-- Encabezado de Contexto -->
   <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-500/10 text-purple-600 dark:text-purple-400 text-xs font-mono font-bold mb-4">
-    <span>📋</span> ACREDITACIÓN DEL CURSO
+    <span></span> ACREDITACIÓN DEL CURSO
   </div>
 
   <!-- Título Principal -->
@@ -401,7 +401,7 @@ tittle: Políticas del Curso
   
   <!-- Encabezado de Contexto -->
   <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-rose-500/10 text-rose-600 dark:text-rose-400 text-xs font-mono font-bold mb-4">
-    <span>📜</span> LINEAMIENTOS Y REGLAS
+    <span></span> LINEAMIENTOS Y REGLAS
   </div>
 
   <!-- Título Principal -->
@@ -491,7 +491,7 @@ Reglas claras para el uso de herramientas digitales y dispositivos en el aula:
 
 <!-- Protocolo de Examen -->
 <div v-click="3" class="border-2 border-slate-500/30 bg-slate-500/10 p-4 rounded-xl shadow-sm">
-  <h4 class="font-bold text-sm mb-1 text-slate-700 dark:text-slate-200">🔒 Protocolo durante Exámenes</h4>
+  <h4 class="font-bold text-sm mb-1 text-slate-700 dark:text-slate-200">Protocolo durante Exámenes</h4>
   <p class="text-xs opacity-90 leading-relaxed">
     Teléfonos celulares entregados en el <b>escritorio del profesor</b> y mochilas colocadas en el <b>frente del aula</b> antes de iniciar la prueba.
   </p>
@@ -530,11 +530,11 @@ Lineamientos para el trabajo en equipo, la disciplina y el contacto fuera de cla
 <!-- Canales de Comunicación -->
 <div v-click="3" class="grid grid-cols-2 gap-4 border-2 border-blue-500/30 bg-blue-500/10 p-4 rounded-xl shadow-sm text-xs">
   <div>
-    <b class="text-blue-600 dark:text-blue-400">✉️ Correo Institucional:</b>
+    <b class="text-blue-600 dark:text-blue-400"> Correo Institucional:</b>
     <p class="opacity-80 mt-0.5">Canal oficial para trámites, justificaciones y asuntos formales.</p>
   </div>
   <div>
-    <b class="text-emerald-600 dark:text-emerald-400">💬 WhatsApp (8:00 - 19:00 hrs):</b>
+    <b class="text-emerald-600 dark:text-emerald-400"> WhatsApp (8:00 - 19:00 hrs):</b>
     <p class="opacity-80 mt-0.5">Avisos rápidos y dudas generales en horario hábil.</p>
   </div>
 </div>
@@ -609,9 +609,9 @@ title: El pilar de la Ingeniería
   </h3>
 
   <div class="flex flex-wrap justify-center gap-2 text-xs font-mono">
-    <span class="px-2.5 py-1 bg-white dark:bg-gray-700/80 rounded-md border border-gray-200 dark:border-gray-600 shadow-xs">🧠 Abstracción</span>
-    <span class="px-2.5 py-1 bg-white dark:bg-gray-700/80 rounded-md border border-gray-200 dark:border-gray-600 shadow-xs">📊 Pensamiento Analítico</span>
-    <span class="px-2.5 py-1 bg-white dark:bg-gray-700/80 rounded-md border border-gray-200 dark:border-gray-600 shadow-xs">⚡ Razonamiento Lógico</span>
+    <span class="px-2.5 py-1 bg-white dark:bg-gray-700/80 rounded-md border border-gray-200 dark:border-gray-600 shadow-xs"> Abstracción</span>
+    <span class="px-2.5 py-1 bg-white dark:bg-gray-700/80 rounded-md border border-gray-200 dark:border-gray-600 shadow-xs"> Pensamiento Analítico</span>
+    <span class="px-2.5 py-1 bg-white dark:bg-gray-700/80 rounded-md border border-gray-200 dark:border-gray-600 shadow-xs"> Razonamiento Lógico</span>
   </div>
 
 </div>
@@ -620,166 +620,189 @@ transition: slide-left
 zoom: 0.88
 ---
 
-# 1.1 ¿Qué es un Algoritmo? (1/4)
-
-<span class="text-xs text-blue-500 font-mono uppercase tracking-wider font-bold block mb-1">Algoritmos frente a Estructuras de Datos</span>
+# ¿Qué es un Algoritmo? (1/4)
 
 <!-- Definición General -->
-<div v-click="1" class="mb-4 p-2 rounded-lg bg-blue-500/10 border-l-4 border-blue-500 text-xs leading-tight">
-  <b class="text-blue-600 dark:text-blue-400">Procedimiento computacional bien definido:</b> Secuencia de pasos lógicos que toma un conjunto de valores como <b>Entrada (Input)</b> y los transforma en un conjunto de resultados como <b>Salida (Output)</b> en un tiempo finito.
+<div v-click="1" class="mb-4 p-4 rounded-xl bg-blue-500/10 border-l-4 border-blue-500 leading-snug">
+  <p>
+    <b class="text-blue-600 dark:text-blue-400">Procedimiento computacional bien definido:</b>
+    Secuencia de pasos lógicos que toma un conjunto de valores como <b>Entrada (Input)</b> y los transforma en un conjunto de resultados como <b>Salida (Output)</b> en un tiempo finito.
+  </p>
 </div>
 
 <!-- 4 Características Fundamentales -->
-<div v-click="2" class="grid grid-cols-2 gap-2 my-2">
-  
-  <div class="bg-blue-500/10">
-    <div class="font-bold"> Precisión</div>
-    <p>Indica rigurosamente el orden secuencial de realización de cada paso, sin ambigüedades.</p>
+<div v-click="2" class="grid grid-cols-2 gap-3 my-3">
+
+  <div class="p-4 rounded-xl bg-blue-500/10">
+    <div class="font-bold mb-1">Precisión</div>
+    <p>
+      Indica rigurosamente el orden secuencial de realización de cada paso, sin ambigüedades.
+    </p>
   </div>
 
-  <div class="bg-emerald-500/10">
-    <div class="font-bold"> Definición</div>
-    <p>Al ejecutarse con los mismos datos de entrada, siempre debe generar exactamente el mismo resultado.</p>
+  <div class="p-4 rounded-xl bg-emerald-500/10">
+    <div class="font-bold mb-1">Definición</div>
+    <p>
+      Al ejecutarse con los mismos datos de entrada, siempre debe generar exactamente el mismo resultado.
+    </p>
   </div>
 
-  <div class="bg-amber-500/10">
-    <div class="font-bold"> Finitud</div>
-    <p>Debe finalizar en algún momento; consta de un número determinado y finito de pasos.</p>
+  <div class="p-4 rounded-xl bg-amber-500/10">
+    <div class="font-bold mb-1">Finitud</div>
+    <p>
+      Debe finalizar en algún momento; consta de un número determinado y finito de pasos.
+    </p>
   </div>
 
-  <div class="bg-purple-500/10">
-    <div class="font-bold"> Partes Claras</div>
-    <p>Estructura explícita dividida en: <b>Entrada</b> ➔ <b>Proceso</b> ➔ <b>Salida</b>.</p>
+  <div class="p-4 rounded-xl bg-purple-500/10">
+    <div class="font-bold mb-1">Partes Claras</div>
+    <p>
+      Estructura explícita dividida en: <b>Entrada</b> ➔ <b>Proceso</b> ➔ <b>Salida</b>.
+    </p>
   </div>
 
-</div>
-
-<!-- Símil Cotidiano -->
-<div v-click="3" class="mt-3 p-2 rounded-lg bg-slate-800 shadow-md flex items-center justify-between">
-  <div class="leading-tight">
-    <span class="text-amber-400 font-bold text-xs block mb-0.5">Símil Cotidiano: Receta de Cocina</span>
-    <span class="text-xs block">
-      Ingredientes (Entrada) ➔ Preparación (Proceso) ➔ Plato Final (Salida)
-    </span>
-  </div>
-  <span class="text-xs font-mono bg-slate-700 text-slate-200 px-2 py-1 rounded border border-slate-600 whitespace-nowrap hidden sm:block">
-    Entrada ➔ Proceso ➔ Salida
-  </span>
 </div>
 
 ---
 transition: slide-left
 ---
 
-# 1.1 ¿Qué es una Estructura de Datos? (2/4)
-
-<span class="text-xs text-indigo-500 font-mono uppercase tracking-wider font-bold">Organización y Almacenamiento Eficiente</span>
+# ¿Qué es una Estructura de Datos? (2/4)
 
 <!-- Definición Principal -->
-<div v-click="1" class="mb-3 bg-indigo-500/10">
-  <p class="m-0 leading-relaxed">
-    <b>Medio sistemático de organización:</b> Permite almacenar y estructurar datos en la memoria de la computadora para facilitar su acceso, manipulación y modificación eficiente.
+<div v-click="1" class="mb-4 p-4 rounded-xl bg-indigo-500/10">
+  <p>
+    <b>Medio sistemático de organización:</b>
+    Permite almacenar y estructurar datos en la memoria de la computadora para facilitar su acceso, manipulación y modificación eficiente.
   </p>
 </div>
 
 <!-- 3 Grupos de Operaciones -->
-<div v-click="2" class="mt-5">
-  <span class="text-[11px] font-mono font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wider block mb-1.5">Operaciones Principales</span>
-  <div class="grid grid-cols-3 gap-2">
-    <div class="p-2.5 rounded-lg border border-gray-200 dark:border-gray-700/80 bg-gray-50/50 dark:bg-gray-800/40 text-center shadow-xs">
-      <div class="text-xs font-bold text-emerald-600 dark:text-emerald-400">⚡ Creación / Eliminación</div>
-      <p class="text-[10px] opacity-80 mt-1">Reserva y liberación de espacio en memoria.</p>
+<div v-click="2" class="mt-4">
+  <div class="font-bold mb-2 text-gray-500 dark:text-gray-400">
+    Operaciones principales
+  </div>
+
+  <div class="grid grid-cols-3 gap-3">
+    <div class="p-4 rounded-xl border border-gray-200 dark:border-gray-700/80 bg-gray-50/50 dark:bg-gray-800/40 text-center shadow-xs">
+      <div class="font-bold mb-1 text-emerald-600 dark:text-emerald-400">
+        Creación / Eliminación
+      </div>
+      <p>
+        Reserva y liberación de espacio en memoria.
+      </p>
     </div>
-    <div class="p-2.5 rounded-lg border border-gray-200 dark:border-gray-700/80 bg-gray-50/50 dark:bg-gray-800/40 text-center shadow-xs">
-      <div class="text-xs font-bold text-amber-600 dark:text-amber-400">🔄 Actualización</div>
-      <p class="text-[10px] opacity-80 mt-1">Inserción y borrado de valores existentes.</p>
+    <div class="p-4 rounded-xl border border-gray-200 dark:border-gray-700/80 bg-gray-50/50 dark:bg-gray-800/40 text-center shadow-xs">
+      <div class="font-bold mb-1 text-amber-600 dark:text-amber-400">
+        Actualización
+      </div>
+      <p>
+        Inserción y borrado de valores existentes.
+      </p>
     </div>
-    <div class="p-2.5 rounded-lg border border-gray-200 dark:border-gray-700/80 bg-gray-50/50 dark:bg-gray-800/40 text-center shadow-xs">
-      <div class="text-xs font-bold text-blue-600 dark:text-blue-400">🔍 Consulta</div>
-      <p class="text-[10px] opacity-80 mt-1">Búsqueda y acceso sin modificar la estructura.</p>
+    <div class="p-4 rounded-xl border border-gray-200 dark:border-gray-700/80 bg-gray-50/50 dark:bg-gray-800/40 text-center shadow-xs">
+      <div class="font-bold mb-1 text-blue-600 dark:text-blue-400">
+        Consulta
+      </div>
+      <p>
+        Búsqueda y acceso sin modificar la estructura.
+      </p>
     </div>
   </div>
 </div>
 
 <!-- Clasificación Estáticas vs Dinámicas -->
-<div v-click="3" class="grid grid-cols-2 gap-3 mt-5">
-  
+<div v-click="3" class="grid grid-cols-2 gap-3 mt-4">
+
   <!-- Estáticas -->
-  <div class="border border-cyan-500/30 bg-cyan-500/10 p-3 rounded-xl shadow-xs">
-    <div class="flex justify-between items-center mb-1">
-      <span class="font-bold text-xs text-cyan-600 dark:text-cyan-400">📌 Estructuras Estáticas</span>
-      <span class="text-[10px] font-mono px-1.5 py-0.5 rounded bg-cyan-500/20 text-cyan-700 dark:text-cyan-300 font-bold">Tamaño Fijo</span>
+  <div class="p-4 rounded-xl border border-cyan-500/30 bg-cyan-500/10 shadow-xs">
+    <div class="flex justify-between items-center mb-2">
+      <div class="font-bold text-cyan-600 dark:text-cyan-400">
+        Estructuras Estáticas
+      </div>
+      <span class="px-2 py-1 rounded bg-cyan-500/20 text-cyan-700 dark:text-cyan-300 font-bold">
+        Tamaño fijo
+      </span>
     </div>
-    <p class="text-[11px] opacity-80 leading-tight mb-1.5">
+    <p>
       Espacio reservado antes de la ejecución. No se redimensionan en tiempo de ejecución.
     </p>
-    <div class="text-[10px] text-cyan-700 dark:text-cyan-300 font-mono">
+    <p class="mt-2 text-cyan-700 dark:text-cyan-300">
       <b>Ejemplos:</b> Arreglos (arrays), vectores, matrices.
-    </div>
+    </p>
   </div>
 
   <!-- Dinámicas -->
-  <div class="border border-purple-500/30 bg-purple-500/10 p-3 rounded-xl shadow-xs">
-    <div class="flex justify-between items-center mb-1">
-      <span class="font-bold text-xs text-purple-600 dark:text-purple-400">🚀 Estructuras Dinámicas</span>
-      <span class="text-[10px] font-mono px-1.5 py-0.5 rounded bg-purple-500/20 text-purple-700 dark:text-purple-300 font-bold">Punteros</span>
+  <div class="p-4 rounded-xl border border-purple-500/30 bg-purple-500/10 shadow-xs">
+    <div class="flex justify-between items-center mb-2">
+      <div class="font-bold text-purple-600 dark:text-purple-400">
+        Estructuras Dinámicas
+      </div>
+      <span class="px-2 py-1 rounded bg-purple-500/20 text-purple-700 dark:text-purple-300 font-bold">
+        Punteros
+      </span>
     </div>
-    <p class="text-[11px] opacity-80 leading-tight mb-1.5">
+    <p>
       Crecen y se contraen en tiempo de ejecución según se requiera.
     </p>
-    <div class="text-[10px] text-purple-700 dark:text-purple-300 font-mono">
+    <p class="mt-2 text-purple-700 dark:text-purple-300">
       <b>Ejemplos:</b> Listas, pilas, colas, árboles, grafos.
-    </div>
+    </p>
   </div>
-
 </div>
 
 ---
 transition: slide-left
 ---
 
-# 1.1 La Relación Simbiótica (3/4)
-
-<span class="text-xs text-indigo-500 font-mono uppercase tracking-wider font-bold">Algoritmos frente a Estructuras de Datos</span>
+# La Relación Simbiótica (3/4)
 
 <!-- Concepto de Simbiosis -->
-<div v-click="1" class="my-2 p-2.5 rounded-xl bg-indigo-500/10 border-l-4 border-indigo-500 text-xs leading-relaxed">
-  <b class="text-indigo-600 dark:text-indigo-400">Dos caras de una misma moneda:</b> Un algoritmo veloz requiere una estructura de datos adecuada que le dé soporte, y una estructura compleja solo cobra sentido mediante algoritmos que la exploten.
+<div v-click="1" class="my-3 p-4 rounded-xl bg-indigo-500/10 border-l-4 border-indigo-500">
+  <p>
+    <b class="text-indigo-600 dark:text-indigo-400">Dos caras de una misma moneda:</b>
+    Un algoritmo veloz requiere una estructura de datos adecuada que le dé soporte, y una estructura compleja solo cobra sentido mediante algoritmos que la exploten.
+  </p>
 </div>
 
 <!-- Ecuación de Niklaus Wirth -->
-<div v-click="2" class="my-3 p-4 rounded-xl bg-slate-900 shadow-md text-center">
-  <div class="inline-block px-3 py-1 rounded-full bg-indigo-500/30 text-indigo-300 font-mono font-bold mb-3 uppercase tracking-wider text-xs">
+<div v-click="2" class="my-4 p-5 rounded-xl bg-slate-900 shadow-md text-center">
+
+  <div class="inline-block px-3 py-1 rounded-full bg-indigo-500/30 text-indigo-300 font-bold mb-3 uppercase tracking-wider">
     Niklaus Wirth — Creador de Pascal
   </div>
-  
-  <div class="flex items-center justify-center gap-3 my-1">
-    <div class="px-4 py-2 rounded-lg bg-blue-600 text-white font-bold">
+
+  <div class="flex items-center justify-center gap-4 my-2">
+    <div class="px-5 py-3 rounded-xl bg-blue-600 text-white font-bold">
       Algoritmos
     </div>
     <span class="text-amber-400 font-bold text-xl">+</span>
-    <div class="px-4 py-2 rounded-lg bg-purple-600 text-white font-bold">
+    <div class="px-5 py-3 rounded-xl bg-purple-600 text-white font-bold">
       Estructuras de Datos
     </div>
     <span class="text-amber-400 font-bold text-xl">=</span>
-    <div class="px-5 py-2 rounded-lg bg-emerald-600 text-white font-extrabold shadow-sm">
+    <div class="px-5 py-3 rounded-xl bg-emerald-600 text-white font-bold shadow-sm">
       Programas
     </div>
   </div>
 </div>
 
 <!-- Impacto y Selección -->
-<div v-click="3" class="grid grid-cols-2 gap-2 mt-2">
-  <div class="border border-gray-200 dark:border-gray-700/80 bg-gray-50/50 dark:bg-gray-800/40 p-2.5 rounded-xl shadow-xs">
-    <div class="font-bold text-xs text-amber-600 dark:text-amber-400 mb-0.5">⚡ Impacto en Rendimiento</div>
-    <p class="text-[11px] opacity-80 leading-tight">
+<div v-click="3" class="grid grid-cols-2 gap-3 mt-3">
+  <div class="p-4 rounded-xl border border-gray-200 dark:border-gray-700/80 bg-gray-50/50 dark:bg-gray-800/40 shadow-xs">
+    <div class="font-bold mb-1 text-amber-600 dark:text-amber-400">
+      Impacto en Rendimiento
+    </div>
+    <p>
       La organización en memoria determina qué operaciones son sencillas y cuáles resultan extremadamente lentas.
     </p>
   </div>
 
-  <div class="border border-gray-200 dark:border-gray-700/80 bg-gray-50/50 dark:bg-gray-800/40 p-2.5 rounded-xl shadow-xs">
-    <div class="font-bold text-xs text-emerald-600 dark:text-emerald-400 mb-0.5">🎯 Núcleo del Software</div>
-    <p class="text-[11px] opacity-80 leading-tight">
+  <div class="p-4 rounded-xl border border-gray-200 dark:border-gray-700/80 bg-gray-50/50 dark:bg-gray-800/40 shadow-xs">
+    <div class="font-bold mb-1 text-emerald-600 dark:text-emerald-400">
+      Núcleo del Software
+    </div>
+    <p>
       La correcta elección de esta dupla es el pilar esencial de la ingeniería de software y el diseño algorítmico.
     </p>
   </div>
@@ -792,46 +815,96 @@ zoom: 0.95
 
 # Tabla Comparativa de Diferencias Clave (4/4)
 
-<span class="text-xs text-blue-500 font-mono uppercase tracking-wider font-bold">1.1 Algoritmos frente a Estructuras de Datos</span>
-
 <!-- Tabla Comparativa -->
-<div v-click="1" class="mt-3 overflow-hidden rounded-xl border border-gray-200 dark:border-gray-700/80 shadow-xs">
-  <table class="w-full text-[10.5px] text-left border-collapse">
+<div v-click="1" class="mt-4 overflow-hidden rounded-xl border border-gray-200 dark:border-gray-700/80 shadow-xs">
+
+  <table class="w-full text-left border-collapse">
     <thead>
       <tr class="bg-gray-100 dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700">
-        <th class="py-2 px-3 font-bold text-gray-700 dark:text-gray-200 w-1/4">Criterio</th>
-        <th class="py-2 px-3 font-bold text-blue-600 dark:text-blue-400 w-3/8"> Algoritmo</th>
-        <th class="py-2 px-3 font-bold text-purple-600 dark:text-purple-400 w-3/8"> Estructura de Datos</th>
+        <th class="py-3 px-4 font-bold text-gray-700 dark:text-gray-200 w-1/4">
+          Criterio
+        </th>
+        <th class="py-3 px-4 font-bold text-blue-600 dark:text-blue-400 w-3/8">
+          Algoritmo
+        </th>
+        <th class="py-3 px-4 font-bold text-purple-600 dark:text-purple-400 w-3/8">
+          Estructura de Datos
+        </th>
       </tr>
     </thead>
     <tbody class="divide-y divide-gray-200 dark:divide-gray-800 bg-white/50 dark:bg-gray-900/40">
       <tr class="hover:bg-gray-50/50 dark:hover:bg-gray-800/30">
-        <td class="py-1.5 px-3 font-bold text-gray-800 dark:text-gray-200">Naturaleza</td>
-        <td class="py-1.5 px-3 opacity-90"><b class="text-blue-600 dark:text-blue-400">Dinámica y de Comportamiento:</b> Proceso, lógica e instrucciones de cálculo.</td>
-        <td class="py-1.5 px-3 opacity-90"><b class="text-purple-600 dark:text-purple-400">Estructural y Organizativa:</b> Disposición, almacenamiento y acceso en memoria.</td>
+        <td class="py-3 px-4 font-bold text-gray-800 dark:text-gray-200">
+          Naturaleza
+        </td>
+        <td class="py-3 px-4">
+          <b class="text-blue-600 dark:text-blue-400">
+            Dinámica y de Comportamiento:
+          </b>
+          Proceso, lógica e instrucciones de cálculo.
+        </td>
+        <td class="py-3 px-4">
+          <b class="text-purple-600 dark:text-purple-400">
+            Estructural y Organizativa:
+          </b>
+          Disposición, almacenamiento y acceso en memoria.
+        </td>
       </tr>
       <tr class="hover:bg-gray-50/50 dark:hover:bg-gray-800/30">
-        <td class="py-1.5 px-3 font-bold text-gray-800 dark:text-gray-200">Pregunta que Resuelve</td>
-        <td class="py-1.5 px-3 opacity-90"><b class="text-blue-600 dark:text-blue-400">¿Cómo se hace?</b> Pasos sistemáticos para resolver un problema.</td>
-        <td class="py-1.5 px-3 opacity-90"><b class="text-purple-600 dark:text-purple-400">¿Dónde y cómo se guarda?</b> Modelo lógico y físico de la información.</td>
+        <td class="py-3 px-4 font-bold text-gray-800 dark:text-gray-200">
+          Pregunta que Resuelve
+        </td>
+        <td class="py-3 px-4">
+          <b class="text-blue-600 dark:text-blue-400">
+            ¿Cómo se hace?
+          </b>
+          Pasos sistemáticos para resolver un problema.
+        </td>
+        <td class="py-3 px-4">
+          <b class="text-purple-600 dark:text-purple-400">
+            ¿Dónde y cómo se guarda?
+          </b>
+          Modelo lógico y físico de la información.
+        </td>
       </tr>
       <tr class="hover:bg-gray-50/50 dark:hover:bg-gray-800/30">
-        <td class="py-1.5 px-3 font-bold text-gray-800 dark:text-gray-200">Componentes</td>
-        <td class="py-1.5 px-3 opacity-90"><b>Entradas, Procesos y Salidas</b> definidos por estructuras de control.</td>
-        <td class="py-1.5 px-3 opacity-90"><b>Campos, registros, nodos, punteros o celdas</b> organizados lógicamente.</td>
+        <td class="py-3 px-4 font-bold text-gray-800 dark:text-gray-200">
+          Componentes
+        </td>
+        <td class="py-3 px-4">
+          <b>Entradas, Procesos y Salidas</b>
+          definidos por estructuras de control.
+        </td>
+        <td class="py-3 px-4">
+          <b>Campos, registros, nodos, punteros o celdas</b>
+          organizados lógicamente.
+        </td>
       </tr>
       <tr class="hover:bg-gray-50/50 dark:hover:bg-gray-800/30">
-        <td class="py-1.5 px-3 font-bold text-gray-800 dark:text-gray-200">Operaciones Comunes</td>
-        <td class="py-1.5 px-3 opacity-90">Operaciones aritméticas, comparaciones y control de flujo.</td>
-        <td class="py-1.5 px-3 opacity-90">Inserción, borrado de datos y consultas/búsquedas.</td>
+        <td class="py-3 px-4 font-bold text-gray-800 dark:text-gray-200">
+          Operaciones Comunes
+        </td>
+        <td class="py-3 px-4">
+          Operaciones aritméticas, comparaciones y control de flujo.
+        </td>
+        <td class="py-3 px-4">
+          Inserción, borrado de datos y consultas/búsquedas.
+        </td>
       </tr>
       <tr class="hover:bg-gray-50/50 dark:hover:bg-gray-800/30">
-        <td class="py-1.5 px-3 font-bold text-gray-800 dark:text-gray-200">Dependencia Mutua</td>
-        <td class="py-1.5 px-3 opacity-90">Requiere una estructura compatible para operar eficientemente.</td>
-        <td class="py-1.5 px-3 opacity-90">Requiere algoritmos específicos para manipular sus elementos.</td>
+        <td class="py-3 px-4 font-bold text-gray-800 dark:text-gray-200">
+          Dependencia Mutua
+        </td>
+        <td class="py-3 px-4">
+          Requiere una estructura compatible para operar eficientemente.
+        </td>
+        <td class="py-3 px-4">
+          Requiere algoritmos específicos para manipular sus elementos.
+        </td>
       </tr>
     </tbody>
   </table>
+
 </div>
 
 ---
@@ -901,7 +974,7 @@ Comparación de estrategias para encontrar el número objetivo dentro del arregl
 * **Aprovechamiento:** Utiliza el orden indexado de la estructura.
 * **¿Es eficiente?:** Altamente eficiente.
 * **Costo Computacional:**
-  * Caso promedio: $\approx 6$ intentos.
+  * **Caso promedio:** $\approx 6$ intentos.
   * **Peor caso:** **$\lceil \log_2(100) \rceil = 7$ intentos** ($O(\log n)$).
 
 </div>
@@ -909,7 +982,9 @@ Comparación de estrategias para encontrar el número objetivo dentro del arregl
 
 <v-click>
 <div class="mt-6 p-4 rounded-lg bg-indigo-950/40 border border-indigo-500/30 text-center text-sm text-indigo-200">
-💡 **Conclusión clave:** El *Algoritmo B* solo es posible porque la *Estructura de Datos* (el arreglo) mantiene los elementos **ordenados e indexados** en memoria.
+ 
+ **Conclusión clave:** El *Algoritmo B* solo es posible porque la *Estructura de Datos* (el arreglo) mantiene los elementos **ordenados e indexados** en memoria.
+
 </div>
 </v-click>
 
@@ -1011,7 +1086,7 @@ i = 0 → 1 → 2 → 3 → ... → n-1
 
 <div class="mt-0 p-4 rounded-xl bg-blue-50 dark:bg-blue-900/30 text-lg">
 
-💡 **Idea fundamental:** no intenta "adivinar" dónde está el elemento. Simplemente revisa cada posición en orden.
+ **Idea fundamental:** no intenta "adivinar" dónde está el elemento. Simplemente revisa cada posición en orden.
 
 </div>
 
@@ -1067,7 +1142,7 @@ i ← i + 1
 
 <div class="mt-0.5 p-5 rounded-xl bg-yellow-50 dark:bg-yellow-900/30">
 
-⚠️ **Importante:** el algoritmo debe contemplar también el caso en que el elemento buscado **no se encuentre** en el arreglo.
+ **Importante:** el algoritmo debe contemplar también el caso en que el elemento buscado **no se encuentre** en el arreglo.
 
 </div>
 
@@ -1460,7 +1535,7 @@ Peor caso:
 
 <div class="mt-10 p-6 rounded-xl bg-blue-50 dark:bg-blue-900/30 text-xl text-center">
 
-📈 **Si duplicamos `n`, el trabajo máximo también se duplica.**
+**Si duplicamos `n`, el trabajo máximo también se duplica.**
 
 </div>
 
@@ -1512,7 +1587,7 @@ $$
 
 <div class="mt-6 p-5 rounded-xl bg-yellow-50 dark:bg-yellow-900/30 text-center text-xl">
 
-### 💭 Pregunta para el siguiente enfoque
+###  Pregunta para el siguiente enfoque
 
 **¿Podemos aprovechar que los números están ordenados para evitar revisar uno por uno?**
 
@@ -1520,7 +1595,7 @@ $$
 
 <div class="mt-4 text-center text-xl">
 
-👉 **Sí: Búsqueda Binaria**
+ **Sí: Búsqueda Binaria**
 
 </div>
 
@@ -1624,7 +1699,7 @@ Descartamos la mitad **derecha**.
 <div class="p-6 rounded-xl bg-green-50 dark:bg-green-900/30">
 
 ### Secreto = centro
-🎯 **¡Encontrado!**
+ **¡Encontrado!**
 La búsqueda termina.
 
 </div>
@@ -1875,7 +1950,7 @@ $$
 $$
 31 = 31
 $$
-🎯 **¡Correcto!**
+ **¡Correcto!**
 
 La búsqueda termina.
 
@@ -1946,7 +2021,7 @@ ITERACIÓN 4
 
 <div class="mt-2 py-2 px-4 rounded-lg bg-green-50 dark:bg-green-900/30 text-center">
 
-🎯 **100 posibilidades → 4 comparaciones → 31 encontrado ✓**
+ **100 posibilidades → 4 comparaciones → 31 encontrado ✓**
 
 </div>
 
@@ -2122,7 +2197,7 @@ La búsqueda binaria puede descartar la mitad de los elementos después de cada 
 
 <div class="mt-8 mx-auto max-w-4xl p-6 rounded-xl bg-blue-50 dark:bg-blue-900/30 text-center">
 
-### 🤔 Entonces, ¿qué propiedad de la estructura de datos hace esto posible?
+###  Entonces, ¿qué propiedad de la estructura de datos hace esto posible?
 
 </div>
 
@@ -2273,7 +2348,7 @@ $$
 
 <div class="mt-10 p-7 rounded-xl bg-purple-50 dark:bg-purple-900/30 text-center text-xl">
 
-### 💡 Principio fundamental
+###  Principio fundamental
 
 **Los algoritmos eficientes están estrechamente ligados a las propiedades de las estructuras de datos sobre las cuales operan.**
 
@@ -2287,23 +2362,21 @@ La propiedad de **ordenamiento** es precisamente lo que permite a la búsqueda b
 
 ---
 layout: default
-zoom: 0.75
+zoom: 0.85
 ---
 
 # Búsqueda Lineal vs. Búsqueda Binaria
 
-<div class="text-xl mt-4 text-center">
-
-Dos estrategias para resolver el mismo problema, pero con **requisitos y eficiencias diferentes**.
-
+<div class="text-lg mt-2 text-center">
+Dos estrategias para resolver el mismo problema, pero con <b>requisitos y eficiencias diferentes</b>.
 </div>
 
-<div class="mt-7">
+<div class="mt-4">
 
-| Característica | 🔵 Búsqueda Lineal | 🟢 Búsqueda Binaria |
+| Característica | Búsqueda Lineal | Búsqueda Binaria |
 |---|---|---|
 | **Estrategia** | Compara elemento por elemento | Compara con el elemento central |
-| **¿Requiere datos ordenados?** | ❌ **No** | ✅ **Sí** |
+| **¿Requiere datos ordenados?** | **No** | **Sí** |
 | **Uso del orden** | No utiliza el orden para buscar | Utiliza el orden para descartar la mitad |
 | **Avance** | Una posición a la vez | Reduce el rango aproximadamente a la mitad |
 | **Datos permitidos** | `[42, 7, 99, 18, 31...]` | `[1, 2, 3, 4, 5...]` |
@@ -2312,46 +2385,45 @@ Dos estrategias para resolver el mismo problema, pero con **requisitos y eficien
 
 </div>
 
-<div class="grid grid-cols-2 gap-8 mt-7">
+<div class="grid grid-cols-2 gap-4 mt-4">
 
-<div class="p-5 rounded-xl bg-blue-50 dark:bg-blue-900/30 text-center">
+<div class="card bg-blue-50 dark:bg-blue-900/30 text-center">
 
-### 🔵 Búsqueda Lineal
+<div class="card-title text-blue-600 dark:text-blue-400">
+🔵 Búsqueda Lineal
+</div>
 
-**“¿Este es el elemento que busco?”**
+<p><b>“¿Este es el elemento que busco?”</b></p>
 
-<div class="mt-3 text-lg">
+<p>
+Si no es, simplemente avanza al <b>siguiente elemento</b>.
+</p>
 
-Si no es, simplemente avanza al **siguiente elemento**.
+</div>
+
+<div class="card bg-green-50 dark:bg-green-900/30 text-center">
+
+<div class="card-title text-green-600 dark:text-green-400">
+🟢 Búsqueda Binaria
+</div>
+
+<p><b>“¿Este es el elemento que busco?”</b></p>
+
+<p><b>“Si no es, ¿en qué dirección debo continuar?”</b></p>
+
+<p>
+El <b>orden</b> permite decidir qué mitad descartar.
+</p>
 
 </div>
 
 </div>
 
-<div class="p-5 rounded-xl bg-green-50 dark:bg-green-900/30 text-center">
+<div class="mt-4 p-3 rounded-xl bg-yellow-50 dark:bg-yellow-900/30 text-center">
 
-### 🟢 Búsqueda Binaria
-
-**“¿Este es el elemento que busco?”**
-
-**“Si no es, ¿en qué dirección debo continuar?”**
-
-<div class="mt-3 text-lg">
-
-El **orden** permite decidir qué mitad descartar.
+<b>Idea clave:</b> La elección de una estructura de datos y las propiedades que posee pueden determinar qué algoritmos podemos aplicar y qué tan eficiente será la solución.
 
 </div>
-
-</div>
-
-</div>
-
-<div class="mt-7 p-5 rounded-xl bg-yellow-50 dark:bg-yellow-900/30 text-center text-xl">
-
-💡 **Idea clave:** La elección de una estructura de datos y las propiedades que posee pueden determinar qué algoritmos podemos aplicar y qué tan eficiente será la solución.
-
-</div>
-
 ---
 layout: default
 ---
@@ -2402,7 +2474,7 @@ layout: default
 ---
 <div class="mt-7 p-6 rounded-xl bg-yellow-50 dark:bg-yellow-900/30 text-center text-xl">
 
-### 💡 Primera conclusión
+###  Conclusión
 
 **Elegir un algoritmo implica considerar cómo están organizados los datos y cuántos recursos requiere la estrategia para resolver el problema.**
 
@@ -2416,7 +2488,7 @@ Pero… ¿cómo podemos **medir y comparar** formalmente ese costo?
 
 <div class="mt-5 text-center text-xl">
 
-⏱️ **Tiempo de ejecución** &nbsp;&nbsp;&nbsp;&nbsp; 💾 **Espacio en memoria**
+ **Tiempo de ejecución** &nbsp;&nbsp;&nbsp;&nbsp;  **Espacio en memoria**
 
 </div>
 
@@ -2431,7 +2503,7 @@ Pero… ¿cómo podemos **medir y comparar** formalmente ese costo?
 layout: default
 ---
 
-# Una última idea: resolver tiene un costo
+# Resolver tiene un costo
 
 <div class="text-lg mt-3 text-center">
 
@@ -2449,7 +2521,7 @@ Dos algoritmos pueden resolver correctamente el mismo problema y, sin embargo, *
 
 <div class="p-5 rounded-xl bg-blue-50 dark:bg-blue-900/30 text-center">
 
-### ⏱️ Tiempo
+###  Tiempo
 
 **¿Cuánto trabajo debe realizar el algoritmo?**
 
@@ -2463,7 +2535,7 @@ Operaciones, comparaciones o pasos necesarios para resolver el problema.
 
 <div class="p-5 rounded-xl bg-green-50 dark:bg-green-900/30 text-center">
 
-### 💾 Espacio
+###  Espacio
 
 **¿Cuánta memoria necesita?**
 
@@ -2483,7 +2555,7 @@ layout: default
 zoom: 0.92
 ---
 
-# Una idea que retomaremos más adelante
+# El trabajo de un algoritmo crece cuando aumentan los datos
 
 <div class="mt-3 text-center text-lg">
 
@@ -2529,7 +2601,7 @@ El trabajo crece mucho más lentamente al aumentar la cantidad de datos.
 
 <div class="mt-4 p-4 rounded-xl bg-yellow-50 dark:bg-yellow-900/30 text-center text-lg">
 
-### 💡 Por ahora, quedémonos con esto:
+###  Por ahora, quedémonos con esto:
 
 Estas expresiones describen **cómo crece el trabajo de un algoritmo cuando aumenta la cantidad de datos**.
 

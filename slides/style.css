@@ -12,29 +12,31 @@
   html body #app .slidev-layout li {
     font-size: 1.18rem !important;
     line-height: 1.32 !important;
-    font-weight: 450;
+    font-weight: 400 !important;
   }
   
-  /* =========================
-     TÍTULOS
-     ========================= */
-  
+ /* =========================
+   TÍTULOS
+   ========================= */
+
   html body #app .slidev-layout h1 {
-    font-size: 2.9rem !important;
-    line-height: 1.08 !important;
-    font-weight: 800 !important;
+    font-size: 2.55rem !important;
+    line-height: 1.1 !important;
+    font-weight: 600 !important;
+    letter-spacing: -0.02em;
   }
-  
+
   html body #app .slidev-layout h2 {
-    font-size: 2.15rem !important;
-    line-height: 1.12 !important;
-    font-weight: 700 !important;
+    font-size: 1.9rem !important;
+    line-height: 1.15 !important;
+    font-weight: 600 !important;
+    letter-spacing: -0.01em;
   }
-  
+
   html body #app .slidev-layout h3 {
-    font-size: 1.55rem !important;
+    font-size: 1.45rem !important;
     line-height: 1.18 !important;
-    font-weight: 700 !important;
+    font-weight: 600 !important;
   }
   
   /* =========================
@@ -228,3 +230,100 @@
 #slidev-goto-dialog {
   display: none !important;
 }
+
+/* Tarjetas visuales principales */
+.slidev-layout div[class*="bg-"][class*="/10"],
+.slidev-layout div[class*="bg-gray"],
+.slidev-layout div[class*="bg-slate"] {
+  border-radius: 0.75rem !important;
+}
+
+/* =========================================================
+   ACABADO VISUAL GENERAL
+   ========================================================= */
+
+/* Tarjetas visuales principales */
+.slidev-layout div[class*="bg-"][class*="/10"],
+.slidev-layout div[class*="bg-gray"],
+.slidev-layout div[class*="bg-slate"] {
+  border-radius: 0.75rem !important;
+}
+
+/* Tipografía de títulos */
+html body #app .slidev-layout h1 {
+  font-size: 2.55rem !important;
+  line-height: 1.1 !important;
+  font-weight: 600 !important;
+  letter-spacing: -0.02em;
+}
+
+html body #app .slidev-layout h2 {
+  font-size: 1.9rem !important;
+  line-height: 1.15 !important;
+  font-weight: 600 !important;
+}
+
+html body #app .slidev-layout h3 {
+  font-size: 1.45rem !important;
+  line-height: 1.18 !important;
+  font-weight: 600 !important;
+}
+
+/* =========================
+   TARJETAS ACADÉMICAS
+   ========================= */
+
+   .academic-card p {
+    font-size: 1.18rem !important;
+    line-height: 1.32 !important;
+    font-weight: 400 !important;
+  }
+  
+  .academic-card .card-title {
+    font-size: 1.22rem !important;
+    line-height: 1.2 !important;
+    font-weight: 600 !important;
+    margin-bottom: 0.35rem !important;
+  }
+
+  /* Texto general dentro de tarjetas */
+.slidev-layout .academic-card p,
+.slidev-layout div[class*="bg-"] p {
+  font-size: 1.18rem !important;
+  line-height: 1.34 !important;
+  font-weight: 400 !important;
+}
+
+/* Títulos internos de tarjetas */
+.slidev-layout .academic-card .card-title,
+.slidev-layout div[class*="bg-"] > .font-bold {
+  font-size: 1.24rem !important;
+  line-height: 1.2 !important;
+  font-weight: 600 !important;
+  margin-bottom: 0.5rem !important;
+}
+
+/* =========================
+   TARJETA ESTÁNDAR
+   ========================= */
+
+   .slidev-layout .card {
+    padding: 1rem !important;
+    border-radius: 0.75rem !important;
+  }
+  
+  /* Título de la tarjeta */
+  .slidev-layout .card > .card-title {
+    font-size: 1.24rem !important;
+    line-height: 1.2 !important;
+    font-weight: 600 !important;
+    margin-bottom: 0.5rem !important;
+  }
+  
+  /* Texto de la tarjeta */
+  .slidev-layout .card > p {
+    font-size: 1.18rem !important;
+    line-height: 1.34 !important;
+    font-weight: 400 !important;
+    margin: 0 !important;
+  }
