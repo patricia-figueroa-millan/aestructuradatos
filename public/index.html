@@ -3,46 +3,575 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Algoritmia y Estructura de Datos</title>
 
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    :root {
+      --bg: #f6f7fb;
+      --card: #ffffff;
+      --border: #e5e7eb;
+      --text: #1f2937;
+      --muted: #64748b;
+
+      --tema1: #d97706;
+      --tema1-soft: #fff7ed;
+
+      --tema2: #2563eb;
+      --tema2-soft: #eff6ff;
+
+      --tema3: #059669;
+      --tema3-soft: #ecfdf5;
+
+      --tema4: #7c3aed;
+      --tema4-soft: #f5f3ff;
+    }
+
     body {
-      font-family: Arial, sans-serif;
-      max-width: 900px;
-      margin: 60px auto;
-      padding: 20px;
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+    }
+
+    .container {
+      width: min(1180px, calc(100% - 40px));
+      margin: 0 auto;
+      padding: 56px 0 80px;
+    }
+
+    .header {
+      margin-bottom: 42px;
+    }
+
+    .institution {
+      display: inline-block;
+      margin-bottom: 10px;
+      font-size: .8rem;
+      font-weight: 800;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: #64748b;
     }
 
     h1 {
-      margin-bottom: 10px;
+      margin: 0;
+      font-size: clamp(2.3rem, 5vw, 3.8rem);
+      line-height: 1.05;
+      color: #111827;
     }
 
-    .sesion {
+    .subtitle {
+      margin: 12px 0 0;
+      font-size: 1.15rem;
+      color: var(--muted);
+    }
+
+    .course-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .course-meta span {
+      padding: 7px 11px;
+      border-radius: 999px;
+      background: #ffffff;
+      border: 1px solid var(--border);
+      font-size: .82rem;
+      color: #475569;
+    }
+
+    .tema {
+      margin-top: 28px;
+      padding: 28px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      box-shadow: 0 8px 25px rgba(15, 23, 42, .05);
+    }
+
+    .tema-header {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      margin-bottom: 22px;
+    }
+
+    .tema-numero {
+      flex: 0 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 52px;
+      height: 52px;
+      border-radius: 14px;
+      font-size: 1.35rem;
+      font-weight: 900;
+    }
+
+    .tema-label {
       display: block;
-      margin-top: 30px;
-      padding: 20px;
-      border: 1px solid #ddd;
-      border-radius: 12px;
-      text-decoration: none;
-      color: inherit;
+      margin-bottom: 4px;
+      font-size: .77rem;
+      font-weight: 800;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: #94a3b8;
     }
 
-    .sesion:hover {
-      background: #f5f5f5;
+    .tema h2 {
+      margin: 0;
+      font-size: 1.55rem;
+      line-height: 1.25;
+    }
+
+    .tema-descripcion {
+      margin: 7px 0 0;
+      color: var(--muted);
+      font-size: .94rem;
+      line-height: 1.45;
+      max-width: 900px;
+    }
+
+    .subtemas {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .subtema {
+      position: relative;
+      display: block;
+      padding: 20px;
+      border: 1px solid var(--border);
+      border-radius: 15px;
+      background: #fafafa;
+      color: inherit;
+      text-decoration: none;
+      transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+    }
+
+    a.subtema:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 9px 22px rgba(15, 23, 42, .08);
+    }
+
+    .subtema-numero {
+      margin-bottom: 7px;
+      font-size: .83rem;
+      font-weight: 900;
+    }
+
+    .subtema-titulo {
+      margin: 0;
+      font-size: 1.04rem;
+      line-height: 1.35;
+      font-weight: 750;
+    }
+
+    .detalle {
+      margin: 12px 0 0;
+      padding-left: 18px;
+      font-size: .87rem;
+      line-height: 1.5;
+      color: var(--muted);
+    }
+
+    .estado {
+      display: inline-block;
+      margin-top: 14px;
+      padding: 5px 10px;
+      border-radius: 999px;
+      font-size: .72rem;
+      font-weight: 800;
+    }
+
+    .disponible {
+      background: #dcfce7;
+      color: #166534;
+    }
+
+    .proximamente {
+      background: #f1f5f9;
+      color: #64748b;
+    }
+
+    .subtema.inactivo {
+      opacity: .68;
+      cursor: default;
+    }
+
+    /* Colores por tema */
+
+    .tema-1 .tema-numero {
+      background: var(--tema1-soft);
+      color: var(--tema1);
+    }
+
+    .tema-1 .subtema-numero {
+      color: var(--tema1);
+    }
+
+    .tema-1 a.subtema:hover {
+      border-color: #fdba74;
+    }
+
+    .tema-2 .tema-numero {
+      background: var(--tema2-soft);
+      color: var(--tema2);
+    }
+
+    .tema-2 .subtema-numero {
+      color: var(--tema2);
+    }
+
+    .tema-2 a.subtema:hover {
+      border-color: #93c5fd;
+    }
+
+    .tema-3 .tema-numero {
+      background: var(--tema3-soft);
+      color: var(--tema3);
+    }
+
+    .tema-3 .subtema-numero {
+      color: var(--tema3);
+    }
+
+    .tema-3 a.subtema:hover {
+      border-color: #6ee7b7;
+    }
+
+    .tema-4 .tema-numero {
+      background: var(--tema4-soft);
+      color: var(--tema4);
+    }
+
+    .tema-4 .subtema-numero {
+      color: var(--tema4);
+    }
+
+    .tema-4 a.subtema:hover {
+      border-color: #c4b5fd;
+    }
+
+    footer {
+      margin-top: 45px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      text-align: center;
+      font-size: .88rem;
+    }
+
+    @media (max-width: 760px) {
+      .container {
+        width: min(100% - 24px, 1180px);
+        padding-top: 34px;
+      }
+
+      .tema {
+        padding: 20px;
+      }
+
+      .subtemas {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
 
 <body>
 
-  <h1>Algoritmia y Estructura de Datos</h1>
+  <main class="container">
 
-  <p>Ingeniería en Inteligencia Artificial</p>
+    <header class="header">
+      <span class="institution">Tecnológico Nacional de México · Instituto Tecnológico de Colima</span>
 
-  <a class="sesion" href="/subtema_1-1/">
-    <h2>Sesión 1</h2>
-    <p>Tema 1. Análisis y Diseño de Algoritmos</p>
-  </a>
+      <h1>Algoritmia y Estructura de Datos</h1>
+
+      <p class="subtitle">
+        Ingeniería en Inteligencia Artificial
+      </p>
+
+      <div class="course-meta">
+        <span>Clave: IAD-2401</span>
+        <span>SATCA: 2-3-5</span>
+        <span>Organización por temas y subtemas</span>
+      </div>
+    </header>
+
+
+    <!-- =====================================================
+         TEMA 1
+         ===================================================== -->
+
+    <section class="tema tema-1">
+
+      <div class="tema-header">
+
+        <div class="tema-numero">1</div>
+
+        <div>
+          <span class="tema-label">Tema 1</span>
+          <h2>Análisis y diseño de algoritmos</h2>
+          <p class="tema-descripcion">
+            Bases para analizar, diseñar y evaluar algoritmos, considerando su eficiencia y la forma en que crece el trabajo computacional.
+          </p>
+        </div>
+
+      </div>
+
+      <div class="subtemas">
+
+        <a class="subtema" href="/subtema_1-1/">
+          <div class="subtema-numero">1.1</div>
+          <p class="subtema-titulo">
+            Definición de algoritmo y estructuras de datos
+          </p>
+          <span class="estado disponible">Disponible</span>
+        </a>
+
+        <div class="subtema inactivo">
+          <div class="subtema-numero">1.2</div>
+          <p class="subtema-titulo">
+            Conceptos de complejidad algorítmica
+          </p>
+          <span class="estado proximamente">Próximamente</span>
+        </div>
+
+        <div class="subtema inactivo">
+          <div class="subtema-numero">1.3</div>
+          <p class="subtema-titulo">
+            Análisis de la eficiencia de los algoritmos: tiempo y espacio
+          </p>
+          <span class="estado proximamente">Próximamente</span>
+        </div>
+
+        <div class="subtema inactivo">
+          <div class="subtema-numero">1.4</div>
+          <p class="subtema-titulo">
+            Notación Big O y su importancia en la eficiencia de algoritmos
+          </p>
+          <span class="estado proximamente">Próximamente</span>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         TEMA 2
+         ===================================================== -->
+
+    <section class="tema tema-2">
+
+      <div class="tema-header">
+
+        <div class="tema-numero">2</div>
+
+        <div>
+          <span class="tema-label">Tema 2</span>
+          <h2>Estructuras de datos y algoritmos de búsqueda</h2>
+          <p class="tema-descripcion">
+            Selección e implementación de estructuras de datos y algoritmos de búsqueda de acuerdo con las necesidades del problema.
+          </p>
+        </div>
+
+      </div>
+
+      <div class="subtemas">
+
+        <div class="subtema inactivo">
+          <div class="subtema-numero">2.1</div>
+
+          <p class="subtema-titulo">
+            Estructuras de datos
+          </p>
+
+          <ul class="detalle">
+            <li>2.1.1 Arreglo</li>
+            <li>2.1.2 Listas</li>
+            <li>2.1.3 Matrices multidimensionales</li>
+            <li>2.1.4 Pilas</li>
+            <li>2.1.5 Colas</li>
+            <li>2.1.6 Punteros</li>
+          </ul>
+
+          <span class="estado proximamente">Próximamente</span>
+        </div>
+
+        <div class="subtema inactivo">
+          <div class="subtema-numero">2.2</div>
+
+          <p class="subtema-titulo">
+            Algoritmos de búsqueda
+          </p>
+
+          <ul class="detalle">
+            <li>2.2.1 Búsqueda lineal</li>
+            <li>2.2.2 Búsqueda binaria</li>
+          </ul>
+
+          <span class="estado proximamente">Próximamente</span>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         TEMA 3
+         ===================================================== -->
+
+    <section class="tema tema-3">
+
+      <div class="tema-header">
+
+        <div class="tema-numero">3</div>
+
+        <div>
+          <span class="tema-label">Tema 3</span>
+          <h2>Algoritmos de ordenamiento y estructuras de datos avanzadas</h2>
+          <p class="tema-descripcion">
+            Aplicación de algoritmos de ordenamiento y estructuras avanzadas para la resolución de problemas computacionales.
+          </p>
+        </div>
+
+      </div>
+
+      <div class="subtemas">
+
+        <div class="subtema inactivo">
+          <div class="subtema-numero">3.1</div>
+
+          <p class="subtema-titulo">
+            Algoritmos de Ordenamiento
+          </p>
+
+          <ul class="detalle">
+            <li>3.1.1 Inserción</li>
+            <li>3.1.2 Selección</li>
+            <li>3.1.3 QuickSort</li>
+          </ul>
+
+          <span class="estado proximamente">Próximamente</span>
+        </div>
+
+        <div class="subtema inactivo">
+          <div class="subtema-numero">3.2</div>
+          <p class="subtema-titulo">
+            Árboles binarios de búsqueda (BST) y árboles
+          </p>
+          <span class="estado proximamente">Próximamente</span>
+        </div>
+
+        <div class="subtema inactivo">
+          <div class="subtema-numero">3.3</div>
+          <p class="subtema-titulo">
+            Almacenamiento libre y colas de prioridad
+          </p>
+          <span class="estado proximamente">Próximamente</span>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         TEMA 4
+         ===================================================== -->
+
+    <section class="tema tema-4">
+
+      <div class="tema-header">
+
+        <div class="tema-numero">4</div>
+
+        <div>
+          <span class="tema-label">Tema 4</span>
+          <h2>Técnicas avanzadas de diseño de algoritmos</h2>
+          <p class="tema-descripcion">
+            Aplicación de grafos, técnicas de búsqueda informada y estrategias avanzadas de diseño algorítmico.
+          </p>
+        </div>
+
+      </div>
+
+      <div class="subtemas">
+
+        <div class="subtema inactivo">
+          <div class="subtema-numero">4.1</div>
+          <p class="subtema-titulo">
+            Conceptos de grafos y sus representaciones
+          </p>
+          <span class="estado proximamente">Próximamente</span>
+        </div>
+
+        <div class="subtema inactivo">
+          <div class="subtema-numero">4.2</div>
+
+          <p class="subtema-titulo">
+            Algoritmos de búsqueda en grafos
+          </p>
+
+          <ul class="detalle">
+            <li>4.2.1 DFS</li>
+            <li>4.2.2 BFS</li>
+          </ul>
+
+          <span class="estado proximamente">Próximamente</span>
+        </div>
+
+        <div class="subtema inactivo">
+          <div class="subtema-numero">4.3</div>
+
+          <p class="subtema-titulo">
+            Algoritmos de búsqueda informada
+          </p>
+
+          <ul class="detalle">
+            <li>4.3.1 A(A-Star)*</li>
+            <li>4.3.2 Greedy Best-First</li>
+          </ul>
+
+          <span class="estado proximamente">Próximamente</span>
+        </div>
+
+        <div class="subtema inactivo">
+          <div class="subtema-numero">4.4</div>
+
+          <p class="subtema-titulo">
+            Técnicas avanzadas de diseño de algoritmos
+          </p>
+
+          <ul class="detalle">
+            <li>4.4.1 Programación dinámica</li>
+            <li>4.4.2 Algoritmos voraces</li>
+          </ul>
+
+          <span class="estado proximamente">Próximamente</span>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <footer>
+      Algoritmia y Estructura de Datos · IAD-2401 · Ingeniería en Inteligencia Artificial
+    </footer>
+
+  </main>
 
 </body>
 </html>
