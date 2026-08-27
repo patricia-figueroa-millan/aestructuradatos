@@ -2678,7 +2678,7 @@ Relaciona 100 elementos con aproximadamente <b>7 reducciones sucesivas a la mita
 </div>
 
 <div class="mt-2 text-center text-lg">
-→ Lo estudiaremos al abordar la <b>complejidad algorítmica</b>.
+→ <b>Complejidad algorítmica (próximos temas)</b>.
 </div>
 
 ---
@@ -2689,7 +2689,7 @@ transition: slide-left
 # Resumen
 
 <div class="text-lg mt-2 text-center">
-Antes de continuar, quedémonos con estas <b>cuatro ideas fundamentales</b>.
+<b>Cuatro ideas fundamentales</b>.
 </div>
 
 <div class="grid grid-cols-2 gap-4 mt-5">
