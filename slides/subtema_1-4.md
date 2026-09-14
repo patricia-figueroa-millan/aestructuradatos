@@ -50,71 +50,77 @@ transition: slide-left
 <p class="!text-white">Big O nos proporciona una forma compacta de expresar una <strong class="text-amber-300">cota superior del crecimiento asintótico.</strong></p>
 </div>
 
----
-
 # Definición e interpretación de Big O
 
 <div class="mt-3 p-4 rounded-xl bg-violet-50 border border-violet-200 text-center">
-<p>Decimos que <strong>f(n) ∈ O(g(n))</strong> si, a partir de cierto tamaño de entrada, el crecimiento de f(n) queda acotado superiormente por un múltiplo constante de g(n).</p>
+
+<p class="text-lg">
+<strong>Big O</strong> es una notación que utilizamos para describir
+<strong>cómo crece el costo de un algoritmo</strong> a medida que aumenta
+el tamaño de la entrada <strong>n</strong>.
+</p>
+
 </div>
 
-<div class="mt-4 text-center">
-<div class="inline-block bg-slate-900 rounded-xl px-7 py-4">
-<div class="font-mono text-xl font-bold text-white">0 ≤ f(n) ≤ c · g(n)</div>
-<div class="mt-2 font-mono text-amber-300">para todo n ≥ n₀</div>
-</div>
+<div class="mt-5 text-center">
+
+<div class="inline-block bg-slate-900 rounded-xl px-8 py-4">
+
+<div class="text-sm text-slate-300">Nos interesa observar</div>
+
+<div class="mt-2 font-mono text-2xl font-bold text-white">
+n aumenta → ¿cómo crece T(n)?
 </div>
 
-<div class="grid grid-cols-3 gap-4 mt-4">
-<div class="card bg-blue-50 border border-blue-200 text-center">
-<div class="font-mono text-2xl font-bold text-blue-800">c</div>
-<p class="mt-2">Constante positiva.</p>
-</div>
-<div class="card bg-violet-50 border border-violet-200 text-center">
-<div class="font-mono text-2xl font-bold text-violet-800">n₀</div>
-<p class="mt-2">Punto desde el que se cumple la cota.</p>
-</div>
-<div class="card bg-amber-50 border border-amber-200 text-center">
-<div class="font-mono text-2xl font-bold text-amber-800">g(n)</div>
-<p class="mt-2">Función que describe la cota de crecimiento.</p>
-</div>
 </div>
 
-<div class="mt-4 text-center font-semibold text-slate-700">Big O describe <span class="text-violet-700">crecimiento</span>, no tiempo exacto de ejecución.</div>
-
----
-
-# De T(n) a Big O
-
-<div class="mt-2 text-center">
-<p>Retomemos el ejemplo:</p>
-<div class="mt-2 font-mono text-3xl font-bold">T(n) = 2n + 3</div>
 </div>
 
 <div class="grid grid-cols-3 gap-4 mt-5">
-<div class="card bg-blue-50 border border-blue-200 text-center">
-<div class="card-title text-blue-800">1. Identificamos términos</div>
-<div class="mt-3 font-mono text-xl font-bold">2n + 3</div>
-<p class="mt-2">Un término lineal y uno constante.</p>
-</div>
 
-<div class="card bg-amber-50 border border-amber-200 text-center">
-<div class="card-title text-amber-800">2. Conservamos el crecimiento dominante</div>
-<div class="mt-3 font-mono text-xl font-bold">2n</div>
-<p class="mt-2">El término constante pierde relevancia al crecer n.</p>
+<div class="card bg-blue-50 border border-blue-200 text-center">
+
+<div class="font-bold text-xl text-blue-800">Tamaño de entrada</div>
+
+<div class="mt-3 font-mono text-2xl font-bold">n</div>
+
+<p class="mt-2">
+Cantidad de datos que debe procesar el algoritmo.
+</p>
+
 </div>
 
 <div class="card bg-violet-50 border border-violet-200 text-center">
-<div class="card-title text-violet-800">3. Eliminamos el factor constante</div>
-<div class="mt-3 font-mono text-xl font-bold">n</div>
-<p class="mt-2">El factor 2 no cambia el orden.</p>
-</div>
+
+<div class="font-bold text-xl text-violet-800">Costo</div>
+
+<div class="mt-3 font-mono text-2xl font-bold">T(n)</div>
+
+<p class="mt-2">
+Representa las operaciones realizadas para un tamaño de entrada n.
+</p>
+
 </div>
 
-<div class="mt-5 p-3 rounded-xl bg-slate-900 text-center">
-<div class="font-mono text-2xl font-bold text-amber-300">T(n) = 2n + 3 → O(n)</div>
-<p class="!text-white mt-2">Decimos que su crecimiento es <strong>lineal</strong>.</p>
+<div class="card bg-amber-50 border border-amber-200 text-center">
+
+<div class="font-bold text-xl text-amber-800">Orden de crecimiento</div>
+
+<div class="mt-3 font-mono text-2xl font-bold">O( · )</div>
+
+<p class="mt-2">
+Describe la tendencia de crecimiento del costo cuando n aumenta.
+</p>
+
 </div>
+
+</div>
+
+<div class="mt-4 text-center font-semibold text-slate-700">
+Big O se enfoca en la <span class="text-violet-700">tendencia de crecimiento</span>,
+no en el número exacto de operaciones.
+</div>
+
 
 ---
 
