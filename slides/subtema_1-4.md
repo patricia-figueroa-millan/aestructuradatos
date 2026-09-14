@@ -50,6 +50,8 @@ transition: slide-left
 <p class="!text-white">Big O nos proporciona una forma compacta de expresar una <strong class="text-amber-300">cota superior del crecimiento asintótico.</strong></p>
 </div>
 
+---
+
 # Definición e interpretación de Big O
 
 <div class="mt-3 p-4 rounded-xl bg-violet-50 border border-violet-200 text-center">
