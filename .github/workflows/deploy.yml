@@ -49,6 +49,18 @@ jobs:
             --out ../dist/subtema_1-2 \
             --base /subtema_1-2/
 
+      - name: Build Subtema 1.3
+        run: |
+          npx slidev build slides/subtema_1-3.md \
+            --out ../dist/subtema_1-3 \
+            --base /subtema_1-3/
+
+      - name: Build Subtema 1.4
+        run: |
+            npx slidev build slides/subtema_1-4.md \
+              --out ../dist/subtema_1-4 \
+              --base /subtema_1-4/
+
       - name: Copy portal
         run: |
           cp public/index.html dist/index.html
@@ -70,6 +82,12 @@ jobs:
 
           echo "=== VERIFICANDO SUBTEMA 1.2 ==="
           test -f dist/subtema_1-2/index.html
+
+          echo "=== VERIFICANDO SUBTEMA 1.3 ==="
+          test -f dist/subtema_1-3/index.html
+
+          echo "=== VERIFICANDO SUBTEMA 1.4 ==="
+          test -f dist/subtema_1-4/index.html
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v4
