@@ -1383,3 +1383,885 @@ O(n)
 Un arreglo permite acceso directo por índice, pero <strong>no todas las operaciones sobre un arreglo cuestan lo mismo</strong>.
 </span>
 </div>
+
+---
+background: /background3.jpg
+class: text-center flex items-center justify-center h-full
+transition: slide-left
+---
+
+<div class="max-w-2xl mx-auto p-8 rounded-2xl bg-slate-900/80 backdrop-blur-md border border-white/10 shadow-2xl text-white">
+<span class="text-xs font-mono font-bold uppercase tracking-widest text-amber-400">Tema 2 · Estructuras de datos</span>
+<h1 class="text-4xl font-black mt-4 bg-gradient-to-r from-amber-200 via-orange-300 to-amber-400 bg-clip-text text-transparent">2.1.2 Listas</h1>
+<div class="mt-3 text-lg text-slate-200">Estructuras dinámicas y costo de sus operaciones</div>
+</div>
+
+---
+
+# Lista: estructura dinámica
+
+```python
+tareas = ["Monitorear", "Generar reporte", "Respaldar datos"]
+```
+
+<div class="grid grid-cols-2 gap-5 mt-4">
+<div class="card bg-blue-50 border border-blue-200"><strong>Acceso / modificación</strong><div class="font-black text-2xl mt-2">O(1)</div></div>
+<div v-click class="card bg-violet-50 border border-violet-200"><strong>Pregunta</strong><div class="mt-2">¿Todas las operaciones cuestan lo mismo?</div><div class="font-black text-2xl mt-2 text-violet-700">No</div></div>
+</div>
+
+---
+
+# Agregar y eliminar
+
+<div class="grid grid-cols-2 gap-5 mt-4">
+<div class="card bg-green-50 border border-green-200">
+
+```python
+tareas.append("Actualizar sistema")
+tareas.pop()
+```
+<div class="text-center font-bold">Final → O(1) amortizado / O(1)</div>
+</div>
+<div v-click class="card bg-amber-50 border border-amber-200">
+
+```python
+tareas.insert(0, "Atender alerta")
+tareas.pop(0)
+```
+<div class="text-center font-bold">Inicio → O(n)</div>
+</div>
+</div>
+
+---
+
+# Buscar, extender y ordenar
+
+| Operación | Complejidad |
+|---|---:|
+| `x in lista` | O(n) |
+| `lista.index(x)` | O(n) |
+| `lista.remove(x)` | O(n) |
+| `lista.extend(nuevas)` | O(k) |
+| `lista[:k]` | O(k) |
+| `lista.sort()` | O(n log n) |
+
+<div v-click class="mt-4 p-3 rounded-xl bg-slate-900 text-center !text-white">En <code>extend()</code>, <strong>k</strong> representa cuántos elementos se agregan.</div>
+
+---
+background: /background3.jpg
+class: text-center flex items-center justify-center h-full
+transition: slide-left
+---
+<div class="max-w-3xl mx-auto p-8 rounded-2xl bg-slate-900/80 backdrop-blur-md border border-white/10 shadow-2xl text-white">
+<span class="text-xs font-mono font-bold uppercase tracking-widest text-amber-400">Práctica · Listas</span>
+<h1 class="text-4xl font-black mt-4 bg-gradient-to-r from-amber-200 via-orange-300 to-amber-400 bg-clip-text text-transparent">Gestión dinámica de tareas</h1>
+<div class="mt-4 text-lg text-slate-200">Operaciones de listas + análisis de complejidad</div>
+</div>
+
+---
+
+# Práctica · 1 · Crear, consultar y modificar
+
+```python
+tareas = [
+    "Monitorización de mediciones",
+    "Generar reporte",
+    "Respaldar base de datos",
+    "Enviar resultados"
+]
+
+cantidad_tareas = len(tareas)       # O(1)
+print(tareas[1])                    # O(1)
+
+tareas[1] = "Generar reporte específico"  # O(1)
+```
+
+<div v-click class="mt-4 p-3 rounded-xl bg-violet-50 border border-violet-200 text-center">
+Si conocemos la posición, accedemos directamente al elemento.
+</div>
+
+---
+
+# Práctica · 2 · Agregar
+
+```python
+tareas.append("Actualizar sistema")
+```
+
+<div class="text-center mt-3 font-black text-2xl text-green-700">O(1) amortizado</div>
+
+<div v-click class="mt-4">
+
+```python
+tareas.insert(0, "Atender alerta")
+```
+
+</div>
+
+<div v-click class="text-center mt-3 font-black text-2xl text-amber-700">O(n)</div>
+
+<div v-click class="mt-3 p-3 rounded-xl bg-amber-50 border border-amber-200 text-center">
+¿Por qué? Insertar al inicio obliga a desplazar los elementos existentes.
+</div>
+
+---
+
+# Práctica · 3 · Eliminar
+
+<div class="grid grid-cols-2 gap-5 mt-3">
+<div>
+
+```python
+completada = tareas.pop()
+```
+
+<div class="text-center font-bold">Final → O(1)</div>
+</div>
+
+<div v-click>
+
+```python
+completada = tareas.pop(0)
+```
+
+<div class="text-center font-bold">Inicio → O(n)</div>
+</div>
+</div>
+
+<div v-click class="mt-5 p-3 rounded-xl bg-slate-900 text-center !text-white">
+Eliminar al inicio requiere desplazar los elementos restantes.
+</div>
+
+---
+
+# Práctica · 4 · Buscar
+
+```python
+encontrada = "Enviar resultados" in tareas
+print(encontrada)
+```
+
+<div v-click class="mt-3 text-center"><code>in</code> → <strong>O(n)</strong></div>
+
+<div v-click class="mt-4">
+
+```python
+posicion = tareas.index("Enviar resultados")
+print(posicion)
+```
+
+</div>
+
+<div v-click class="mt-3 text-center"><code>index()</code> → <strong>O(n)</strong></div>
+
+---
+
+# Práctica · 5 · Eliminar por valor
+
+```python
+tareas.remove("Enviar resultados")
+print(tareas)
+```
+
+<div v-click class="mt-5 p-4 rounded-xl bg-amber-50 border border-amber-200 text-center">
+Primero debe localizar el valor y después puede ser necesario desplazar elementos.
+<div class="font-black text-2xl text-amber-700 mt-2">O(n)</div>
+</div>
+
+---
+
+# Práctica · 6 · Agregar varios elementos
+
+```python
+tareas_nuevas = [
+    "Revisar red",
+    "Validar datos",
+    "Documentar cambios"
+]
+
+tareas.extend(tareas_nuevas)
+```
+
+<div v-click class="mt-4 p-4 rounded-xl bg-slate-900 text-center">
+<div class="!text-white">Si incorporamos <strong>k</strong> elementos:</div>
+<div class="font-black text-3xl text-amber-300 mt-2">O(k)</div>
+</div>
+
+<div v-click class="mt-3 text-center text-sm"><strong>k</strong> = cantidad de elementos que agregamos.</div>
+
+---
+
+# Práctica · 7 · Slicing
+
+```python
+primeras = tareas[:3]
+print(primeras)
+```
+
+<div v-click class="mt-5 p-4 rounded-xl bg-violet-50 border border-violet-200 text-center">
+El slicing crea una nueva lista con los elementos seleccionados.
+<div class="font-black text-2xl text-violet-700 mt-2">k elementos → O(k)</div>
+</div>
+
+---
+
+# Práctica · 8 · Ordenar
+
+```python
+tareas.sort()
+print(tareas)
+```
+
+<div v-click class="mt-5 p-4 rounded-xl bg-slate-900 text-center">
+<div class="!text-white">Ordenar la lista:</div>
+<div class="font-black text-3xl text-amber-300 mt-2">O(n log n)</div>
+</div>
+
+---
+
+# Cierre · Operaciones de listas
+
+| Operación | Complejidad |
+|---|---:|
+| `len(lista)`, `lista[i]`, modificar `lista[i]` | O(1) |
+| `append(x)` | O(1) amortizado |
+| `pop()` | O(1) |
+| `insert(i,x)`, `pop(i)`, `remove(x)` | O(n) |
+| `in`, `index(x)` | O(n) |
+| `extend(...)`, slicing | O(k) |
+| `sort()` | O(n log n) |
+
+<div v-click class="mt-3 p-3 rounded-xl bg-amber-50 border border-amber-200 text-center">
+Una lista es dinámica, pero la posición y la operación elegida determinan su costo.
+</div>
+
+---
+background: /background3.jpg
+class: text-center flex items-center justify-center h-full
+transition: slide-left
+---
+<div class="max-w-2xl mx-auto p-8 rounded-2xl bg-slate-900/80 backdrop-blur-md border border-white/10 shadow-2xl text-white">
+<span class="text-xs font-mono font-bold uppercase tracking-widest text-amber-400">Tema 2 · Estructuras de datos</span>
+<h1 class="text-4xl font-black mt-4 bg-gradient-to-r from-amber-200 via-orange-300 to-amber-400 bg-clip-text text-transparent">2.1.3 Matrices multidimensionales</h1>
+<div class="mt-3 text-lg text-slate-200">Organización de datos en filas y columnas</div>
+</div>
+
+---
+
+# ¿Qué es una matriz?
+
+<div class="grid grid-cols-2 gap-6 mt-4">
+<div class="card bg-blue-50 border border-blue-200">
+Una <strong>matriz</strong> organiza datos en dos dimensiones:
+<div class="mt-4 text-center font-black text-2xl text-blue-800">filas × columnas</div>
+<div class="mt-4 text-sm">Cada dato se identifica mediante una fila y una columna.</div>
+</div>
+
+<div v-click class="font-mono text-center">
+
+```text
+          columnas
+          0   1   2
+       ┌─────────────
+fila 0 │ 12   7  18
+fila 1 │  5  21  14
+fila 2 │  8  11  25
+```
+
+</div>
+</div>
+
+---
+
+# En Python: lista de listas
+
+```python
+matriz = [
+    [12,  7, 18,  9],
+    [ 5, 21, 14, 16],
+    [ 8, 11, 25,  6],
+    [19, 13, 10, 17]
+]
+```
+
+<div class="grid grid-cols-2 gap-4 mt-4 text-center">
+<div v-click class="card bg-blue-50 border border-blue-200"><code>matriz</code><div class="mt-2">Lista principal</div></div>
+<div v-click class="card bg-violet-50 border border-violet-200"><code>matriz[i]</code><div class="mt-2">Una fila completa</div></div>
+</div>
+
+<div v-click class="mt-4 text-center"><strong>4 filas × 4 columnas = 16 elementos</strong></div>
+
+---
+
+# Índices: fila y columna
+
+<div class="grid grid-cols-[90px_repeat(4,70px)] gap-1 mt-5 justify-center text-center font-mono">
+<div></div><div class="font-bold text-slate-500">0</div><div class="font-bold text-slate-500">1</div><div class="font-bold text-violet-700">2</div><div class="font-bold text-slate-500">3</div>
+
+<div class="font-bold text-slate-500 py-2">fila 0</div><div class="card !p-2">12</div><div class="card !p-2">7</div><div class="card !p-2">18</div><div class="card !p-2">9</div>
+<div class="font-bold text-slate-500 py-2">fila 1</div><div class="card !p-2">5</div><div class="card !p-2">21</div><div class="card !p-2">14</div><div class="card !p-2">16</div>
+<div class="font-bold text-violet-700 py-2">fila 2 →</div><div class="card !p-2">8</div><div class="card !p-2">11</div><div class="card !p-2 bg-violet-100 border-violet-300 font-bold">25</div><div class="card !p-2">6</div>
+<div class="font-bold text-slate-500 py-2">fila 3</div><div class="card !p-2">19</div><div class="card !p-2">13</div><div class="card !p-2">10</div><div class="card !p-2">17</div>
+</div>
+
+<div v-click class="mt-5 p-3 rounded-xl bg-slate-900 text-center">
+<span class="font-mono text-amber-300 text-xl">matriz[2][2] = 25</span>
+<div class="!text-white text-sm mt-1">Primero indicamos la fila y después la columna.</div>
+</div>
+
+---
+
+# Acceder y modificar una celda
+
+```python
+print(matriz[2][2])   # 25
+
+matriz[2][2] = 30
+```
+
+<div class="grid grid-cols-2 gap-4 mt-5 text-center">
+<div v-click class="card bg-blue-50 border border-blue-200">Acceso por posición<div class="font-black text-2xl mt-2">O(1)</div></div>
+<div v-click class="card bg-violet-50 border border-violet-200">Modificación por posición<div class="font-black text-2xl mt-2">O(1)</div></div>
+</div>
+
+<div v-click class="mt-4 p-3 rounded-xl bg-amber-50 border border-amber-200 text-center">
+Tener dos índices <strong>no significa O(n²)</strong>.
+</div>
+
+---
+
+# Recorrer una fila
+
+```python
+for valor in matriz[0]:
+    print(valor)
+```
+
+<div v-click class="mt-4 font-mono text-center">12 → 7 → 18 → 9</div>
+
+<div v-click class="mt-4 p-3 rounded-xl bg-blue-50 border border-blue-200 text-center">
+Si la fila tiene c columnas → <strong>O(c)</strong>.<br>
+En una matriz n × n → <strong>O(n)</strong>.
+</div>
+
+---
+
+# Recorrer una columna
+
+```python
+for fila in matriz:
+    print(fila[0])
+```
+
+<div v-click class="mt-4 font-mono text-center">
+
+```text
+12
+ 5
+ 8
+19
+```
+
+</div>
+
+<div v-click class="mt-3 text-center">Visitamos un elemento por fila → <strong>O(n)</strong> en una matriz n × n.</div>
+
+---
+
+# Recorrer toda la matriz
+
+```python
+for fila in matriz:
+    for valor in fila:
+        print(valor)
+```
+
+<div class="grid grid-cols-2 gap-4 mt-5 text-center">
+<div v-click class="card bg-blue-50 border border-blue-200">Caso general<div class="font-black text-2xl mt-2">O(f · c)</div><div class="text-sm mt-1">f filas, c columnas</div></div>
+<div v-click class="card bg-violet-50 border border-violet-200">Matriz n × n<div class="font-black text-3xl mt-2">O(n²)</div></div>
+</div>
+
+<div v-click class="mt-4 text-center text-sm">No es “dos for = O(n²)”; depende del número de iteraciones.</div>
+
+---
+
+# Suma y promedio de una fila
+
+```python
+fila = matriz[0]
+
+suma = sum(fila)
+promedio = sum(fila) / len(fila)
+```
+
+<div class="grid grid-cols-2 gap-4 mt-5 text-center">
+<div v-click class="card bg-amber-50 border border-amber-200"><code>sum(fila)</code><div class="font-black text-xl mt-2">O(n)</div></div>
+<div v-click class="card bg-blue-50 border border-blue-200"><code>len(fila)</code><div class="font-black text-xl mt-2">O(1)</div></div>
+</div>
+
+<div v-click class="mt-4 text-center">El recorrido de la fila domina → <strong>O(n)</strong>.</div>
+
+---
+
+# Suma o promedio de todas las filas
+
+```python
+for fila in matriz:
+    promedio = sum(fila) / len(fila)
+    print(promedio)
+```
+
+<div v-click class="mt-5 p-4 rounded-xl bg-slate-900 text-center">
+<div class="!text-white">n filas × n elementos procesados por <code>sum()</code></div>
+<div class="font-black text-3xl text-amber-300 mt-2">O(n²)</div>
+</div>
+
+---
+
+# Buscar el valor máximo
+
+```python
+mayor = matriz[0][0]
+
+for fila in matriz:
+    for valor in fila:
+        if valor > mayor:
+            mayor = valor
+```
+
+<div v-click class="mt-5 p-4 rounded-xl bg-amber-50 border border-amber-200 text-center">
+Para garantizar el máximo debemos considerar todos los elementos.
+<div class="font-black text-3xl text-amber-700 mt-2">O(n²)</div>
+</div>
+
+---
+
+# Resumen · Matrices con listas de listas
+
+| Operación | Matriz n × n |
+|---|---:|
+| Acceder `matriz[i][j]` | O(1) |
+| Modificar `matriz[i][j]` | O(1) |
+| Recorrer una fila | O(n) |
+| Recorrer una columna | O(n) |
+| Sumar / promediar una fila | O(n) |
+| Recorrer toda la matriz | O(n²) |
+| Buscar el máximo | O(n²) |
+
+---
+background: /background3.jpg
+class: text-center flex items-center justify-center h-full
+transition: slide-left
+---
+<div class="max-w-3xl mx-auto p-8 rounded-2xl bg-slate-900/80 backdrop-blur-md border border-white/10 shadow-2xl text-white">
+<span class="text-xs font-mono font-bold uppercase tracking-widest text-amber-400">Práctica · Matrices</span>
+<h1 class="text-4xl font-black mt-4 bg-gradient-to-r from-amber-200 via-orange-300 to-amber-400 bg-clip-text text-transparent">Temperaturas de varios días</h1>
+<div class="mt-4 text-lg text-slate-200">Acceso · modificación · recorridos · promedio · máximo</div>
+</div>
+
+---
+
+# Práctica · 1 · Crear la matriz
+
+```python
+temperaturas = [
+    [24,27,29,31,28],
+    [23,26,30,32,29],
+    [25,28,31,33,30]
+]
+```
+
+<div v-click class="mt-5 p-4 rounded-xl bg-slate-900 text-center !text-white">
+¿Qué representa cada lista interna? ¿Cuántas filas y columnas tenemos?
+</div>
+
+---
+
+# Práctica · 2 · Acceder y modificar
+
+```python
+print(temperaturas[1][3])   # O(1)
+
+temperaturas[1][3] = 40     # O(1)
+print(temperaturas)
+```
+
+<div v-click class="mt-5 p-3 rounded-xl bg-amber-50 border border-amber-200 text-center">
+Conocemos la posición exacta: no recorremos la matriz.
+</div>
+
+---
+
+# Práctica · 3 · Recorrer una fila
+
+```python
+for t in temperaturas[0]:
+    print(t)
+```
+
+<div v-click class="mt-5 text-center">Una fila → <strong>O(n)</strong> para n columnas.</div>
+
+---
+
+# Práctica · 4 · Recorrer toda la matriz
+
+```python
+for fila in temperaturas:
+    for t in fila:
+        print(t)
+```
+
+<div v-click class="mt-5 p-4 rounded-xl bg-slate-900 text-center">
+<div class="!text-white">Matriz n × n:</div>
+<div class="font-black text-3xl text-amber-300 mt-2">O(n²)</div>
+</div>
+
+---
+
+# Práctica · 5 · Promedio del lunes
+
+```python
+lunes = temperaturas[0]
+promedio_temp_lunes = sum(lunes) / len(lunes)
+
+print(promedio_temp_lunes)
+```
+
+<div v-click class="mt-5 text-center"><code>sum()</code> recorre la fila → <strong>O(n)</strong></div>
+
+---
+
+# Práctica · 6 · Promedio de cada día
+
+```python
+for fila in temperaturas:
+    promedio = sum(fila) / len(fila)
+    print(promedio)
+```
+
+<div v-click class="mt-5 p-3 rounded-xl bg-violet-50 border border-violet-200 text-center">
+n filas × n elementos por fila → <strong>O(n²)</strong>
+</div>
+
+---
+
+# Práctica · 7 · Temperatura mayor
+
+```python
+mayor = temperaturas[0][0]
+
+for fila in temperaturas:
+    for t in fila:
+        if t > mayor:
+            mayor = t
+
+print("Temperatura mayor:", mayor)
+```
+
+<div v-click class="mt-4 text-center">Recorrido completo → <strong>O(n²)</strong></div>
+
+---
+
+# Reto · Matrices
+
+```python
+matriz = [
+    [12,  7, 18,  9],
+    [ 5, 21, 14, 16],
+    [ 8, 11, 25,  6],
+    [19, 13, 10, 17]
+]
+```
+
+<div class="grid grid-cols-2 gap-3 mt-3">
+<div v-click class="card bg-blue-50 border border-blue-200">Imprime únicamente la <strong>columna 0</strong>.</div>
+<div v-click class="card bg-violet-50 border border-violet-200">Obtén la <strong>suma de cada fila</strong>.</div>
+<div v-click class="card bg-amber-50 border border-amber-200">Encuentra el <strong>valor máximo</strong> sin usar <code>max()</code>.</div>
+<div v-click class="card bg-green-50 border border-green-200">Indica la <strong>complejidad</strong> de cada solución.</div>
+</div>
+
+---
+
+# Práctica extracurricular · Matrices con NumPy
+
+<div class="grid grid-cols-2 gap-5 mt-3">
+<div>
+
+```python
+matriz = [
+    [12,  7, 18,  9],
+    [ 5, 21, 14, 16],
+    [ 8, 11, 25,  6],
+    [19, 13, 10, 17]
+]
+```
+
+<div class="mt-3 p-3 rounded-xl bg-violet-50 border border-violet-200 text-center text-sm">
+Implementa esta matriz utilizando <strong>NumPy</strong>.
+</div>
+</div>
+
+<div class="card bg-amber-50 border border-amber-200">
+<div class="card-title text-amber-800">La práctica debe incluir</div>
+<div class="text-sm leading-6">
+① Crear la matriz como un arreglo NumPy.<br>
+② Mostrar sus dimensiones y tamaño.<br>
+③ Acceder a un elemento específico.<br>
+④ Modificar un elemento.<br>
+⑤ Obtener una fila completa.<br>
+⑥ Obtener una columna completa.<br>
+⑦ Calcular la suma de cada fila.<br>
+⑧ Calcular la suma de cada columna.<br>
+⑨ Calcular el promedio de cada fila.<br>
+⑩ Obtener el valor máximo y el mínimo.<br>
+⑪ Indicar la posición del valor máximo.<br>
+⑫ Explicar la complejidad de las operaciones realizadas.
+</div>
+</div>
+</div>
+
+<div v-click class="mt-4 p-3 rounded-xl bg-slate-900 text-center !text-white">
+Entrega: código ejecutable + resultados obtenidos + breve análisis de complejidad.
+</div>
+
+---
+background: /background3.jpg
+class: text-center flex items-center justify-center h-full
+transition: slide-left
+---
+
+<div class="max-w-2xl mx-auto p-8 rounded-2xl bg-slate-900/80 backdrop-blur-md border border-white/10 shadow-2xl text-white">
+<span class="text-xs font-mono font-bold uppercase tracking-widest text-amber-400">Tema 2 · Estructuras de datos</span>
+<h1 class="text-4xl font-black mt-4 bg-gradient-to-r from-amber-200 via-orange-300 to-amber-400 bg-clip-text text-transparent">2.1.4 Pilas</h1>
+<div class="mt-3 text-lg text-slate-200">TDA restringido basado en LIFO</div>
+</div>
+
+---
+
+# Pila como TDA
+
+<div class="grid grid-cols-2 gap-6 mt-4">
+<div class="font-mono text-center text-lg">
+
+```text
+          TOPE
+            ↓
+       ┌─────────┐
+       │    D    │
+       ├─────────┤
+       │    C    │
+       ├─────────┤
+       │    B    │
+       ├─────────┤
+       │    A    │
+       └─────────┘
+```
+</div>
+<div class="card bg-violet-50 border border-violet-200 text-center flex flex-col justify-center"><div class="font-black text-4xl text-violet-700">LIFO</div><div class="mt-3"><strong>Last In, First Out</strong></div><div class="mt-2">El último en entrar es el primero en salir.</div></div>
+</div>
+
+---
+
+# Operaciones fundamentales
+
+| Operación | Función | Costo esperado |
+|---|---|---:|
+| **Push** | Inserta en el tope | O(1) |
+| **Pop** | Elimina y devuelve el tope | O(1) |
+| **Peek / Top** | Consulta el tope | O(1) |
+| **isEmpty** | Comprueba si está vacía | O(1) |
+| **Size** | Cantidad de elementos | O(1) |
+
+<div v-click class="mt-4 p-3 rounded-xl bg-amber-50 border border-amber-200 text-center">La pila restringe el acceso: trabajamos directamente sobre el <strong>tope</strong>.</div>
+
+---
+
+# ¿Qué pasa con un elemento interno?
+
+```text
+TOPE → [ D ]
+       [ C ]
+       [ B ] ← queremos llegar aquí
+       [ A ]
+```
+
+<div v-click class="mt-4 p-4 rounded-xl bg-blue-50 border border-blue-200 text-center">Respetando el TDA: <strong>POP D → POP C → B queda en el tope</strong>.</div>
+<div v-click class="mt-4 text-center">En el peor caso se procesan n elementos → <strong>O(n)</strong>.</div>
+
+---
+
+# Pila en Python
+
+```python
+pila = []
+
+pila.append("A")   # PUSH
+pila.append("B")
+pila.append("C")
+
+print(pila[-1])    # PEEK / TOP
+pila.pop()         # POP
+print(len(pila))   # SIZE
+```
+
+<div v-click class="mt-4 p-3 rounded-xl bg-violet-50 border border-violet-200 text-center">Python proporciona una <code>list</code>; nosotros imponemos la disciplina <strong>LIFO</strong>.</div>
+
+---
+
+# TDA Pila ↔ Python
+
+| TDA | Con `list` |
+|---|---|
+| `push(x)` | `pila.append(x)` |
+| `pop()` | `pila.pop()` |
+| `peek()` / `top()` | `pila[-1]` |
+| `isEmpty()` | `len(pila) == 0` |
+| `size()` | `len(pila)` |
+
+<div v-click class="mt-4 text-center text-sm">Con una lista, <code>append()</code> es O(1) amortizado; <code>pop()</code> al final y <code>[-1]</code> son O(1).</div>
+
+---
+
+# Python lo permite... pero no como pila
+
+<div class="grid grid-cols-2 gap-5 mt-4">
+<div class="card bg-green-50 border border-green-200"><strong>✓ Usar</strong>
+
+```python
+pila.append(x)
+pila.pop()
+pila[-1]
+len(pila)
+```
+</div>
+<div v-click class="card bg-red-50 border border-red-200"><strong>✗ Evitar como TDA Pila</strong>
+
+```python
+pila.insert(i, x)
+pila.remove(x)
+pila.pop(i)
+pila[i]
+pila[i] = x
+pila.index(x)
+```
+</div>
+</div>
+
+---
+
+# Buscar no es una operación básica
+
+<div class="grid grid-cols-2 gap-5 mt-4">
+<div class="card bg-amber-50 border border-amber-200">
+<strong>Como TDA</strong>
+<div class="mt-3 text-sm">Desapilamos hasta alcanzar el elemento. Para conservar la pila puede utilizarse una pila auxiliar.</div>
+</div>
+
+<div v-click class="card bg-violet-50 border border-violet-200">
+<strong>Como <code>list</code> de Python</strong>
+<div class="mt-3 font-mono bg-white/70 rounded-lg p-3">"B" in pila<br>pila.index("B")</div>
+<div class="mt-3 text-sm">Python lo permite, pero son operaciones de <code>list</code>, no de la interfaz fundamental de una pila.</div>
+</div>
+</div>
+
+<div v-click class="mt-5 p-3 rounded-xl bg-slate-900 text-center">
+<span class="!text-white">En el peor caso revisamos n elementos:</span>
+<span class="font-black text-2xl text-amber-300 ml-2">O(n)</span>
+</div>
+
+---
+
+# ¿Por qué son importantes?
+
+<div class="grid grid-cols-2 gap-4 mt-4">
+<div class="card bg-blue-50 border border-blue-200"><strong>Llamadas a funciones</strong><br><span class="text-sm">La última llamada pendiente se resuelve primero.</span></div>
+<div v-click class="card bg-violet-50 border border-violet-200"><strong>Deshacer</strong><br><span class="text-sm">La última acción es la primera que se revierte.</span></div>
+<div v-click class="card bg-amber-50 border border-amber-200"><strong>Evaluación de expresiones</strong><br><span class="text-sm">Paréntesis y operadores.</span></div>
+<div v-click class="card bg-green-50 border border-green-200"><strong>Backtracking</strong><br><span class="text-sm">Regresar al último estado pendiente.</span></div>
+</div>
+
+---
+background: /background3.jpg
+class: text-center flex items-center justify-center h-full
+transition: slide-left
+---
+<div class="max-w-3xl mx-auto p-8 rounded-2xl bg-slate-900/80 backdrop-blur-md border border-white/10 shadow-2xl text-white">
+<span class="text-xs font-mono font-bold uppercase tracking-widest text-amber-400">Práctica guiada · Pilas</span>
+<h1 class="text-4xl font-black mt-4 bg-gradient-to-r from-amber-200 via-orange-300 to-amber-400 bg-clip-text text-transparent">Validación de paréntesis</h1>
+<div class="mt-4 text-lg text-slate-200">Un problema donde LIFO es necesario</div>
+</div>
+
+---
+
+# El problema
+
+<div class="grid grid-cols-2 gap-5 mt-4">
+<div class="card bg-green-50 border border-green-200 text-center"><div class="font-mono text-2xl">(a + b) * (c - d)</div><div class="mt-3 font-bold text-green-700">✓ Balanceada</div></div>
+<div v-click class="card bg-red-50 border border-red-200 text-center"><div class="font-mono text-2xl">(a + b)) * (c - d</div><div class="mt-3 font-bold text-red-700">✗ No balanceada</div></div>
+</div>
+<div v-click class="mt-5 p-4 rounded-xl bg-slate-900 text-center !text-white">¿Cómo recordar cada paréntesis abierto y cerrarlo en el orden correcto?</div>
+
+---
+
+# Paso 1 · Apilar aperturas
+
+```python
+expresion = "(a + b) * (c - d)"
+pila = []
+
+for caracter in expresion:
+    if caracter == "(":
+        pila.append(caracter)
+```
+
+<div v-click class="mt-4 p-3 rounded-xl bg-amber-50 border border-amber-200 text-center">Cada <code>(</code> queda pendiente de ser cerrado.</div>
+
+---
+
+# Paso 2 · Procesar cierres
+
+```python
+elif caracter == ")":
+    if len(pila) == 0:
+        print("No balanceada")
+        break
+
+    pila.pop()
+```
+
+<div v-click class="mt-4 p-3 rounded-xl bg-violet-50 border border-violet-200 text-center">Si aparece <code>)</code> con la pila vacía, no existe una apertura pendiente.</div>
+
+---
+
+# Paso 3 · Solución completa
+
+```python
+expresion = "(a + b) * (c - d)"
+pila = []
+valida = True
+
+for caracter in expresion:
+    if caracter == "(":
+        pila.append(caracter)
+    elif caracter == ")":
+        if len(pila) == 0:
+            valida = False
+            break
+        pila.pop()
+
+if len(pila) != 0:
+    valida = False
+
+print("Balanceada" if valida else "No balanceada")
+```
+
+---
+
+# Cierre · Pilas
+
+<div class="grid grid-cols-3 gap-3 mt-5 text-center">
+<div class="card bg-blue-50 border border-blue-200"><strong>Regla</strong><div class="font-black text-2xl text-violet-700 mt-2">LIFO</div></div>
+<div class="card bg-violet-50 border border-violet-200"><strong>Acceso</strong><div class="font-black text-2xl text-violet-700 mt-2">TOPE</div></div>
+<div class="card bg-amber-50 border border-amber-200"><strong>Operaciones</strong><div class="font-bold mt-2">push · pop · peek</div></div>
+</div>
+<div v-click class="mt-6 p-4 rounded-xl bg-slate-900 text-center !text-white">Una pila es útil cuando el problema exige recuperar información en <strong>orden inverso al que fue incorporada</strong>.</div>
