@@ -2816,7 +2816,7 @@ eventos = [
 ```
 
 <div class="mt-5 p-4 rounded-xl bg-red-50 border border-red-200">
-  Al iniciar, la cola está vacía. No podemos ejecutar `popleft()` si no existe ningún elemento que retirar.
+  Al iniciar, la cola está vacía. No podemos ejecutar <code>popleft()</code> si no existe ningún elemento que retirar.
 </div>
 
 <div class="mt-5 text-center">
@@ -3106,28 +3106,33 @@ c = a
 ```
 
 <div class="grid grid-cols-2 gap-5 mt-5">
+
 <div class="card">
 
 ### `==`
+
 Compara el **contenido o valor**.
 
 ```python
 a == b   # True
 ```
+
 </div>
 
 <div class="card">
 
 ### `is`
+
 Comprueba si es el **mismo objeto**.
 
 ```python
 a is b   # False
 a is c   # True
 ```
-</div>
+
 </div>
 
+</div>
 ---
 
 # Comprueba: `==` o `is`
