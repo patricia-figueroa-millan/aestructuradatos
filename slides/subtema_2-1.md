@@ -3481,13 +3481,33 @@ Justifica utilizando los conceptos de <strong>referencia</strong> y <strong>alia
 # Lo esencial
 
 <div class="grid grid-cols-2 gap-4 mt-5">
-<div class="card"><strong>Referencia</strong><p class="mt-2">Permite acceder a un objeto.</p></div>
-<div class="card"><strong>Aliasing</strong><p class="mt-2">Varias variables pueden referenciar el mismo objeto.</p></div>
-<div class="card"><strong>`is` vs. `==`</strong><p class="mt-2"><code>is</code>: mismo objeto.<br><code>==</code>: mismo contenido/valor.</p></div>
-<div class="card"><strong>`None`</strong><p class="mt-2">Puede representar la ausencia de un siguiente enlace.</p></div>
+
+<div class="card">
+  <strong>Referencia</strong>
+  <p class="mt-2">Permite acceder a un objeto.</p>
+</div>
+
+<div class="card">
+  <strong>Aliasing</strong>
+  <p class="mt-2">Varias variables pueden referenciar el mismo objeto.</p>
+</div>
+
+<div class="card">
+  <strong><code>is</code> vs. <code>==</code></strong>
+  <p class="mt-2">
+    <code>is</code>: mismo objeto.<br>
+    <code>==</code>: mismo contenido/valor.
+  </p>
+</div>
+
+<div class="card">
+  <strong><code>None</code></strong>
+  <p class="mt-2">Puede representar la ausencia de un siguiente enlace.</p>
+</div>
+
 </div>
 
 <div class="mt-5 p-4 rounded-xl bg-violet-50 border border-violet-200 text-center">
-<strong>Un nodo puede almacenar una referencia hacia otro nodo.</strong><br>
-Esta idea será fundamental cuando trabajemos con árboles.
+  <strong>Un nodo puede almacenar una referencia hacia otro nodo.</strong><br>
+  Esta idea será fundamental cuando trabajemos con árboles.
 </div>
