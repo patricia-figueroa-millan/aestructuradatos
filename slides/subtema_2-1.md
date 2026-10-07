@@ -3362,7 +3362,7 @@ En un árbol, un nodo puede contener referencias hacia **más de un nodo**:
 
 <div class="mt-6 text-center font-mono text-2xl">
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[50]<br>
-&nbsp;&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;&nbsp;\<br>
+&nbsp;&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;&nbsp;&#92;<br>
 &nbsp;[20]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[70]
 </div>
 
@@ -3392,7 +3392,7 @@ raiz.derecho = Nodo(70)
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;raiz<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;↓<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[50]<br>
-&nbsp;&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;&nbsp;\<br>
+&nbsp;&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;&nbsp;&#92;<br>
 &nbsp;[20]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[70]
 </div>
 
