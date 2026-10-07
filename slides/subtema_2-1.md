@@ -2915,24 +2915,32 @@ layout: default
 
 <div class="card">
   <strong>Extremos</strong>
-  <p class="mt-2">Se agrega por el <strong>final</strong> y se elimina por el <strong>frente</strong>.</p>
+  <p class="mt-2">
+    Se agrega por el <strong>final</strong> y se elimina por el <strong>frente</strong>.
+  </p>
 </div>
 
 <div class="card">
   <strong>Python</strong>
   <div class="font-mono mt-2">collections.deque</div>
-  <p>`append()` + `popleft()`</p>
+  <p>
+    <code>append()</code> + <code>popleft()</code>
+  </p>
 </div>
 
 <div class="card">
   <strong>Eficiencia</strong>
-  <p class="mt-2">Evitar `list.pop(0)` porque requiere <strong>O(n)</strong>.</p>
+  <p class="mt-2">
+    Evitar <code>list.pop(0)</code> porque requiere <strong>O(n)</strong>.
+  </p>
 </div>
 
 </div>
 
 <div class="mt-6 p-4 rounded-xl bg-amber-50 border border-amber-200 text-center">
-  <strong>Pregunta final:</strong> si una aplicación debe respetar estrictamente el orden de llegada, ¿qué estructura elegirías y por qué?
+  <strong>Pregunta final:</strong>
+  si una aplicación debe respetar estrictamente el orden de llegada,
+  ¿qué estructura elegirías y por qué?
 </div>
 
 ---
