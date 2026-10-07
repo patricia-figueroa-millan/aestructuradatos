@@ -2243,17 +2243,21 @@ valida = True
 for caracter in expresion:
     if caracter == "(":
         pila.append(caracter)
+
     elif caracter == ")":
         if len(pila) == 0:
             valida = False
             break
+
         pila.pop()
 
 if len(pila) != 0:
     valida = False
 
-print("Balanceada" if valida else "No balanceada")
-```
+if valida:
+    print("Balanceada")
+else:
+    print("No balanceada")
 
 ---
 
