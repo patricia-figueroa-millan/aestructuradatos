@@ -1,0 +1,9 @@
+codigo,nombre,categoria,precio,existencia
+P005,Laptop,Computadoras,14500,4
+P002,Teclado,Perifericos,450,10
+P008,Disco SSD,Almacenamiento,1250,12
+P001,Mouse,Perifericos,250,15
+P006,Impresora,Impresion,2800,5
+P003,Monitor,Pantallas,3200,6
+P007,Memoria USB,Almacenamiento,180,25
+P004,Webcam,Perifericos,700,8
