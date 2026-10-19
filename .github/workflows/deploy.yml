@@ -73,6 +73,12 @@ jobs:
               --out ../dist/subtema_2-1 \
               --base /subtema_2-1/
 
+      - name: Build Subtema 2.2
+        run: |
+            npx slidev build slides/subtema_2-2.md \
+              --out ../dist/subtema_2-2 \
+              --base /subtema_2-2/
+
       - name: Copy portal
         run: |
           cp public/index.html dist/index.html
