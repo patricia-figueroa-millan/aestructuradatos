@@ -107,6 +107,9 @@ jobs:
           echo "=== VERIFICANDO SUBTEMA 2.1 ==="
           test -f dist/subtema_2-1/index.html
 
+          echo "=== VERIFICANDO SUBTEMA 2.2 ==="
+          test -f dist/subtema_2-2/index.html
+
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v4
 
